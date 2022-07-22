@@ -1,0 +1,148 @@
+/* multiple page styles */
+.pageContainer {
+  width:35%;
+  margin: 0 auto;
+}
+.content {
+  max-width: 35%;
+  float: left;
+  margin: 0.5em 0.8em 1em 0.8em;
+  border: 1px solid lightgray;
+  box-shadow: 0 0 1px 1px lightgrey;
+  padding: 1em;
+  text-align: center;
+}
+.blockIcon {
+  float: left;
+  width: 100%;
+  padding: 0 0 0.5em 0;
+}
+.blockContent {
+  font-size: 1em;
+}
+.blockContent b {
+  font-size: 1.5em;
+}
+.blockButton {
+  padding: 1em 1.5em 1em 1.5em;
+  width: 100%;
+}
+/* index.vue */
+.playerCount {
+  text-align: center;
+  font-size: 1.5em;
+  padding-top: 0.5em;
+}
+/* highscores.vue */
+.playerSearch {
+  padding: 1em 1em 1em 1em;
+  margin: 2em 0 1.5em 0;
+  width: 58%;
+  float: left;
+}
+.searchButton {
+  padding: 1em 1.5em 1em 1.5em;
+  margin: 2em 0 1.5em 0.6em;
+  float: left;
+}
+.clearButton {
+  padding: 1em 1.5em 1em 1.5em;
+  margin: 2em 0 1.5em 0;
+  float: right;
+}
+.defaultResult {
+  width: 100%;
+  box-shadow: 0 0 2px 2px lightgrey;
+  border-radius: 5px;
+  height: 450px;
+  float: left;
+  text-align: center;
+}
+/* beastiary.vue */
+.beastiaryCounters {
+  float: left;
+  width: 100%;
+  text-align: center;
+  padding: 1em 0 0 0;
+  font-size: 1.5em;
+}
+/* default.vue */
+.defaultContent {
+  padding-top: 50px;
+}
+/* AppFooter.vue */
+.footerNavbar {
+  text-align: left;
+  background-color: cornflowerblue;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  float: left;
+}
+.footerCopyright {
+  color: black;
+  padding: 1em;
+  float: left;
+}
+/* AppHeader.vue */
+.headerNavbar {
+  text-align: right;
+  background-color: cornflowerblue;
+  float: left;
+  width:100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.headerNavbar a {
+  text-decoration: none;
+  font-size: 0.8em;
+  color: black;
+  padding: 2em 1.5em 2em 1.5em;
+  float: right;
+}
+/* SearchResult.vue */
+.searchResult {
+  width: 100%;
+  box-shadow: 0 0 2px 2px lightgrey;
+  border-radius: 5px;
+  height: 450px;
+  float: left;
+  text-align: left;
+  overflow: auto;
+}
+.searchResult p {
+  padding: 0 0 0 1em;
+  text-align: center;
+}
+.highscoresTitle {
+  text-align: center;
+  padding: 0 0 0 0 !important;
+  text-decoration: underline;
+  line-height: 30px;
+}
+.playerMetrics {
+  line-height: 30px;
+  margin: 0.5em auto;
+  width: 95%;
+}
+.highscoreTitles {
+  float: right;
+  width: 100%;
+  padding: 0 2em 0 0;
+}
+.highscoreTitles p {
+  float: right;
+  text-align: center;
+  max-width: 50%;
+  min-width: 15%;
+  padding: 0 0.5em 0 0.5em;
+}
+.highscoreTitles h4 {
+  float: right;
+  text-align: center;
+  width: 15%;
+  padding: 0 0.5em 0 0.5em;
+  text-decoration: underline;
+}
