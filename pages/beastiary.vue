@@ -1,8 +1,17 @@
 <template>
   <div>
     <div class="pageContainer">
-      <p class="beastiaryCounters">Number of Beastiary <br />Entries Found: {{ entriesFound }}</p>
-      <p class="beastiaryCounters">Number of Beastiary <br />Entries Missing: {{ missingEntries }}</p>
+      <p class="beastiaryCounters">Number of Beastiary <br />Entries Found: <br />{{ entriesFound }}</p>
+      <p class="beastiaryCounters">Number of Beastiary <br />Entries Missing: <br />{{ missingEntries }}</p>
+
+      <div class="beastiaryOutput">
+          <p class="entriesInformation" v-if="this.entriesFound">
+              Hello World!
+          </p>
+          <p class="entriesInformation" v-else-if="this.missingEntries">
+              Hello World
+          </p>
+      </div>
     </div>
   </div>
 </template>
@@ -76,9 +85,19 @@ export default {
   }
   .beastiaryCounters {
     float: left;
-    width: 100%;
+    width: 50%;
     text-align: center;
-    padding: 1em 0 0 0;
-    font-size: 1.5em;
+    padding: 1em 0 1em 0;
+    font-size: 1em;
+  }
+  .beastiaryOutput {
+    float: left;
+    width: 100%;
+    border: 1px solid black;
+    padding: 1em 1em 1em 1em;
+  }
+  .entriesInformation {
+    width: 50%;
+    float: left;
   }
 </style>
