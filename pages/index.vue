@@ -48,12 +48,9 @@ export default {
     async getCurrentPlayerCount() {
       try {
         const { data } = await axios.get(`/proxy/playerCount`)
-
         this.playerCount = data.toLocaleString();
-
         let timeout = setTimeout(() => {
           this.getCurrentPlayerCount();
-
           clearTimeout(timeout); }, 3000)
       } catch(error) {
         console.log(error);

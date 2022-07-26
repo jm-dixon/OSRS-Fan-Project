@@ -1,15 +1,17 @@
 <template>
   <div>
     <div class="pageContainer">
-      <p class="beastiaryCounters">Number of Beastiary <br />Entries Found: <br />{{ entriesFound }}</p>
-      <p class="beastiaryCounters">Number of Beastiary <br />Entries Missing: <br />{{ missingEntries }}</p>
-
+      <p class="beastiaryCounters">
+        Number of Beastiary <br />Entries Found:<br />
+          <b>{{ entriesFound }}</b>
+      </p>
+      <p class="beastiaryCounters">
+        Number of Beastiary <br />Entries Missing: <br />
+          <b>{{ missingEntries }}</b>
+      </p>
       <div class="beastiaryOutput">
-          <p class="entriesInformation" v-if="this.entriesFound">
-              Hello World!
-          </p>
-          <p class="entriesInformation" v-else-if="this.missingEntries">
-              Hello World
+          <p class="entriesInformation" v-for="entry in entriesList" :key="entry.beastiaryIndex">
+              {{ entriesList.beastiaryIndex }} : {{ entriesList.entryName }}
           </p>
       </div>
     </div>
@@ -28,7 +30,8 @@ export default {
     data() {
         return {
           entriesFound: null,
-          missingEntries: null
+          missingEntries: null,
+          entriesList: []
         }
     },
     computed: {
@@ -43,7 +46,12 @@ export default {
 
             if (Object.keys(data).length) {
               console.log(`Beastiary entry found at increment: ${increment} : for :  ${data.name}`);
-              this.entriesFound++
+              const entry = {
+                beastiaryIndex: increment,
+                entryName: data.name
+              }
+              this.entriesList.push(entry);
+              this.entriesFound++;
             } else if (!Object.keys(data).length) {
               console.log(`Beastiary entry missing at increment: ${increment}`);
               this.missingEntries++
@@ -95,9 +103,12 @@ export default {
     width: 100%;
     border: 1px solid black;
     padding: 1em 1em 1em 1em;
+    text-align: center;
+    overflow: auto;
+    height: 55vh;
   }
   .entriesInformation {
-    width: 50%;
+    width: 100%;
     float: left;
   }
 </style>

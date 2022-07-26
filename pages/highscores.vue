@@ -13,7 +13,9 @@
 
       <search-result v-if="this.playerToSearch != null" :playerToSearch="this.playerToSearch" />
       <div v-else class="defaultResult">
-        <p>No Player Name Entered</p>
+        <p>
+          No Player Name Entered
+        </p>
       </div>
     </div>
   </div>

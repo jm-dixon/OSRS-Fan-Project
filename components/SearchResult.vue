@@ -1,6 +1,8 @@
 <template>
   <div class="searchResult">
-    <p class="highscoresTitle"><b>{{ playerToSearch }}</b> | Highscores</p>
+    <p class="highscoresTitle">
+      <b>{{ playerToSearch }}</b> | Highscores
+    </p>
 
     <div class="highscoreTitles">
       <b>
@@ -10,10 +12,18 @@
 
     <div class="highscoreTitles"
     v-for="skill in skillsArray" :key="skill.skillName">
-      <p>{{ parseInt(skill.skillMetrics[2]).toLocaleString() }}</p>
-      <p>{{ skill.skillMetrics[1] }}</p>
-      <p>{{ parseInt(skill.skillMetrics[0]).toLocaleString() }}</p>
-      <p><b>{{ skill.skillName }}: </b></p>
+      <p>
+        {{ parseInt(skill.skillMetrics[2]).toLocaleString() }}
+      </p>
+      <p>
+        {{ skill.skillMetrics[1] }}
+      </p>
+      <p>
+        {{ parseInt(skill.skillMetrics[0]).toLocaleString() }}
+      </p>
+      <p>
+        <b>{{ skill.skillName }}: </b>
+      </p>
     </div>
 
     <br />
@@ -26,9 +36,15 @@
 
     <div class="highscoreTitles"
     v-for="activity in activitiesArray" :key="activity.activityName">
-      <p>{{ parseInt(activity.activityMetrics[1]).toLocaleString() }}</p>
-      <p>{{ parseInt(activity.activityMetrics[0]).toLocaleString() }}</p>
-      <p><b>{{ activity.activityName }}: </b></p>
+      <p>
+        {{ parseInt(activity.activityMetrics[1]).toLocaleString() }}
+      </p>
+      <p>
+        {{ parseInt(activity.activityMetrics[0]).toLocaleString() }}
+      </p>
+      <p>
+        <b>{{ activity.activityName }}: </b>
+      </p>
     </div>
 
     <br />
@@ -41,9 +57,15 @@
 
     <div class="highscoreTitles"
     v-for="boss in bossesArray" :key="boss.bossName">
-      <p>{{ parseInt(boss.bossMetrics[1]).toLocaleString() }}</p>
-      <p>{{ parseInt(boss.bossMetrics[0]).toLocaleString() }}</p>
-      <p><b>{{ boss.bossName }}: </b></p>
+      <p>
+        {{ parseInt(boss.bossMetrics[1]).toLocaleString() }}
+      </p>
+      <p>
+        {{ parseInt(boss.bossMetrics[0]).toLocaleString() }}
+      </p>
+      <p>
+        <b>{{ boss.bossName }}: </b>
+      </p>
     </div>
   </div>
 </template>
@@ -95,7 +117,6 @@ export default {
     async getPlayerHighscores() {
       try {
         const { data } = await axios.get(`/proxy/getHighscores?player=${this.playerToSearch}`)
-
         this.formatOutput(data);
       } catch(error) {
         console.log(error);
