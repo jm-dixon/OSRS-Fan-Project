@@ -13,7 +13,7 @@
         buttonLabel="Visit"
         buttonLink="/highscores"
       />
-      <beastiary-block
+      <bestiary-block
         blockTitle="Bestiary"
         blockData="
           --- ---
@@ -28,10 +28,10 @@
 import axios from 'axios'
 
 import HighscoresBlock from '../components/HighscoresBlock.vue'
-import BeastiaryBlock from '../components/BeastiaryBlock.vue'
+import BestiaryBlock from '../components/BestiaryBlock.vue'
 
 export default {
-  components: { HighscoresBlock, BeastiaryBlock },
+  components: { HighscoresBlock, BestiaryBlock },
   name: 'IndexPage',
   props: {
     /* No Props */

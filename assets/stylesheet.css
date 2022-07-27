@@ -112,21 +112,23 @@ button {
 }
 .alternateSearches {
   padding: 0.5em 0 1em 0;
+  float: left;
+  width: 100%;
 }
 .alternateSearches button {
-  width: 32%;
+  width: 33%;
   float: left;
-  margin: 0.1em 0.1em 0.1em 0.1em;
+  font-size: 0.6em;
 }
-/* beastiary.vue */
-.beastiaryCounters {
+/* bestiary.vue */
+.bestiaryCounters {
   float: left;
   width: 50%;
   text-align: center;
   padding: 1em 0 1em 0;
   font-size: 1em;
 }
-.beastiaryOutput {
+.bestiaryOutput {
   float: left;
   width: 100%;
   border: 1px solid black;
