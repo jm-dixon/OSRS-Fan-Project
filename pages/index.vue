@@ -14,7 +14,7 @@
         buttonLink="/highscores"
       />
       <beastiary-block
-        blockTitle="Beastiary"
+        blockTitle="Bestiary"
         blockData="
           --- ---
         "

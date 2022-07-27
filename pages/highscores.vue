@@ -11,6 +11,12 @@
         {{ clearButtonText }}
       </button>
 
+      <!-- <div class="alternateSearches">
+        <button type="button">Ironmen</button>
+        <button type="button">Hardcore Ironmen</button>
+        <button type="button">Ultimate Ironmen</button>
+      </div> -->
+
       <search-result v-if="this.playerToSearch != null" :playerToSearch="this.playerToSearch" />
       <div v-else class="defaultResult">
         <p>

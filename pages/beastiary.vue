@@ -2,22 +2,20 @@
   <div>
     <div class="pageContainer">
       <p class="beastiaryCounters">
-        Number of Beastiary
+        Number of Bestiary
         <br />
         Entries Found:
-        <br />
-          <b>{{ entriesFound }}</b>
+        <b>{{ entriesFound }}</b>
       </p>
       <p class="beastiaryCounters">
-        Number of Beastiary
+        Number of Bestiary
         <br />
         Entries Missing:
-        <br />
-          <b>{{ missingEntries }}</b>
+        <b>{{ missingEntries }}</b>
       </p>
       <div class="beastiaryOutput">
           <p class="entriesInformation" v-for="entry in entriesList" :key="entry.beastiaryIndex">
-              Beastiary Index : {{ entry.beastiaryIndex }} | Index For :  {{ entry.entryName }}
+              Bestiary Index : {{ entry.beastiaryIndex }} | Index For :  {{ entry.entryName }}
           </p>
       </div>
     </div>
@@ -69,7 +67,7 @@ export default {
       },
     },
     mounted() {
-        // this.loopThroughBeastiary();
+        this.loopThroughBeastiary();
     },
 }
 </script>

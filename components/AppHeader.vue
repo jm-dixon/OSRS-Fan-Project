@@ -7,7 +7,7 @@
           Highscores
         </nuxt-link>
         <nuxt-link class="headerNav" to='/beastiary'>
-          Beastiary
+          Bestiary
         </nuxt-link>
     </div>
 </template>

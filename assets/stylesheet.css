@@ -110,6 +110,14 @@ button {
   float: left;
   text-align: center;
 }
+.alternateSearches {
+  padding: 0.5em 0 1em 0;
+}
+.alternateSearches button {
+  width: 32%;
+  float: left;
+  margin: 0.1em 0.1em 0.1em 0.1em;
+}
 /* beastiary.vue */
 .beastiaryCounters {
   float: left;
@@ -159,6 +167,7 @@ button {
   position: fixed;
   top: 0;
   left: 0;
+  padding: 0 1em 0 0;
 }
 .headerNavbar a {
   text-decoration: none;
