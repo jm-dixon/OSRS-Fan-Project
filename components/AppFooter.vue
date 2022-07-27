@@ -22,20 +22,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-  .footerNavbar {
-    text-align: left;
-    background-color: cornflowerblue;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    float: left;
-  }
-  .footerCopyright {
-    color: black;
-    padding: 1em;
-    float: left;
-  }
-</style>

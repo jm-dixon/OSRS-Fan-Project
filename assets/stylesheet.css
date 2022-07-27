@@ -1,6 +1,26 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;400;700&display=swap');
+p {
+  font-family: 'Kanit', sans-serif;
+  font-weight: 200;
+}
+hgroup {
+  font-family: 'Kanit', sans-serif;
+  font-weight: 200;
+}
+a {
+  font-family: 'Kanit', sans-serif;
+  font-weight: 400;
+}
 /* multiple page styles */
+button {
+  padding: 1em 1.5em 1em 1.5em;
+  background-color: steelblue;
+  color: whitesmoke;
+  border-radius: 5px;
+}
 .pageContainer {
-  width:35%;
+  width: 35%;
   margin: 0 auto;
 }
 .content {
@@ -14,8 +34,7 @@
 }
 .blockIcon {
   float: left;
-  width: 100%;
-  padding: 0 0 0.5em 0;
+  padding: 1em;
 }
 .blockContent {
   font-size: 1em;
@@ -24,14 +43,47 @@
   font-size: 1.5em;
 }
 .blockButton {
-  padding: 1em 1.5em 1em 1.5em;
-  width: 100%;
+  width: 65%;
 }
 /* index.vue */
 .playerCount {
   text-align: center;
   font-size: 1.5em;
   padding-top: 0.5em;
+}
+.indexContent {
+  width: 47%;
+  float: left;
+  text-align: center;
+  margin: 0 0 1em 0;
+  padding: 1em 1em 1em 1em;
+}
+.indexContainer {
+  width: 85%;
+  margin: 0 auto;
+}
+.indexBlockImage {
+  margin: 0.5em 0.5em 0.5em 0.5em;
+  padding: 0.5em 0.5em 0.5em 0.5em;
+  float: left;
+  width: 40%;
+}
+.indexBlockDescription {
+  float: left;
+  width: 50%;
+  margin: 0.5em 0 0.5em 0;
+}
+.indexBlockLink {
+  width: 50%;
+  float: left;
+  margin: 0.5em 0 0.5em 0;
+}
+.border {
+  margin: 1em 1em 1em 1em;
+  background-color: whitesmoke;
+  border-radius: 8px;
+  float: left;
+  width: 94%;
 }
 /* highscores.vue */
 .playerSearch {
@@ -86,7 +138,7 @@
 /* AppFooter.vue */
 .footerNavbar {
   text-align: left;
-  background-color: cornflowerblue;
+  background-color: steelblue;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -94,14 +146,14 @@
   float: left;
 }
 .footerCopyright {
-  color: black;
+  color: whitesmoke;
   padding: 1em;
   float: left;
 }
 /* AppHeader.vue */
 .headerNavbar {
   text-align: right;
-  background-color: cornflowerblue;
+  background-color: steelblue;
   float: left;
   width:100%;
   position: fixed;
@@ -111,7 +163,7 @@
 .headerNavbar a {
   text-decoration: none;
   font-size: 0.8em;
-  color: black;
+  color: whitesmoke;
   padding: 2em 1.5em 2em 1.5em;
   float: right;
 }
@@ -158,4 +210,34 @@
   width: 15%;
   padding: 0 0.5em 0 0.5em;
   text-decoration: underline;
+}
+
+/* Media Queries */
+/* Desktop + */
+@media screen and (min-width: 1025px) {
+  /* multiple page styles */
+  .pageContainer {
+    width: 35%;
+    margin: 0 auto;
+  }
+  .content {
+    max-width: 35%;
+    float: left;
+    margin: 0.5em 0.8em 1em 0.8em;
+    border: 1px solid lightgray;
+    box-shadow: 0 0 1px 1px lightgrey;
+    padding: 1em;
+    text-align: center;
+  }
+  .blockIcon {
+    float: left;
+    width: 100%;
+    padding: 0 0 0.5em 0;
+  }
+  .blockContent {
+    font-size: 1em;
+  }
+  .blockContent b {
+    font-size: 1.5em;
+  }
 }

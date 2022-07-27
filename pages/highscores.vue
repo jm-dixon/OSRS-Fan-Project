@@ -55,34 +55,3 @@ export default {
   },
 }
 </script>
-
-<style scoped>
-  .pageContainer {
-    width:35%;
-    margin: 0 auto;
-  }
-  .playerSearch {
-    padding: 1em 1em 1em 1em;
-    margin: 2em 0 1.5em 0;
-    width: 58%;
-    float: left;
-  }
-  .searchButton {
-    padding: 1em 1.5em 1em 1.5em;
-    margin: 2em 0 1.5em 0.6em;
-    float: left;
-  }
-  .clearButton {
-    padding: 1em 1.5em 1em 1.5em;
-    margin: 2em 0 1.5em 0;
-    float: right;
-  }
-  .defaultResult {
-    width: 100%;
-    box-shadow: 0 0 2px 2px lightgrey;
-    border-radius: 5px;
-    height: 450px;
-    float: left;
-    text-align: center;
-  }
-</style>

@@ -4,7 +4,7 @@
       Players Online: {{ playerCount }}
     </p>
 
-    <div class="pageContainer">
+    <div class="indexContainer">
       <highscores-block
         blockTitle="Leaderboards"
         blockData="
@@ -62,15 +62,3 @@ export default {
   },
 }
 </script>
-
-<style scoped>
-  .playerCount {
-    text-align: center;
-    font-size: 1.5em;
-    padding-top: 0.5em;
-  }
-  .pageContainer {
-    width:35%;
-    margin: 0 auto;
-  }
-</style>

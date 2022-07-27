@@ -2,16 +2,22 @@
   <div>
     <div class="pageContainer">
       <p class="beastiaryCounters">
-        Number of Beastiary <br />Entries Found:<br />
+        Number of Beastiary
+        <br />
+        Entries Found:
+        <br />
           <b>{{ entriesFound }}</b>
       </p>
       <p class="beastiaryCounters">
-        Number of Beastiary <br />Entries Missing: <br />
+        Number of Beastiary
+        <br />
+        Entries Missing:
+        <br />
           <b>{{ missingEntries }}</b>
       </p>
       <div class="beastiaryOutput">
           <p class="entriesInformation" v-for="entry in entriesList" :key="entry.beastiaryIndex">
-              {{ entriesList.beastiaryIndex }} : {{ entriesList.entryName }}
+              Beastiary Index : {{ entry.beastiaryIndex }} | Index For :  {{ entry.entryName }}
           </p>
       </div>
     </div>
@@ -43,7 +49,6 @@ export default {
         try {
           while(true) {
             const { data } = await axios.get(`/proxy/testBeastiaryEntry?beastid=${increment}`)
-
             if (Object.keys(data).length) {
               console.log(`Beastiary entry found at increment: ${increment} : for :  ${data.name}`);
               const entry = {
@@ -62,53 +67,9 @@ export default {
           console.log(error);
         }
       },
-
-      /* async findTotalBeastiaryEntries() {
-        try {
-          for(let i = 0; i < 16000; i++) {
-            const { data } = await axios.get(`/proxy/testBeastiaryEntry?beastid=${i}`)
-
-            if (data != null) {
-              console.log(`Beastiary entry found at position ${i}`);
-            } else if (data === null) {
-              console.log(`No entry found in Beastiary at position ${i}`);
-            }
-          }
-        } catch(error) {
-          console.log(error);
-        }
-      } */
     },
     mounted() {
-        // this.findTotalBeastiaryEntries();
-        this.loopThroughBeastiary();
+        // this.loopThroughBeastiary();
     },
 }
 </script>
-
-<style scoped>
-  .pageContainer {
-    width: 35%;
-    margin: 0 auto;
-  }
-  .beastiaryCounters {
-    float: left;
-    width: 50%;
-    text-align: center;
-    padding: 1em 0 1em 0;
-    font-size: 1em;
-  }
-  .beastiaryOutput {
-    float: left;
-    width: 100%;
-    border: 1px solid black;
-    padding: 1em 1em 1em 1em;
-    text-align: center;
-    overflow: auto;
-    height: 55vh;
-  }
-  .entriesInformation {
-    width: 100%;
-    float: left;
-  }
-</style>
