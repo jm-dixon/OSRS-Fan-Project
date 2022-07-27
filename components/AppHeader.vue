@@ -6,7 +6,7 @@
         <nuxt-link class="headerNav" to='/highscores'>
           Highscores
         </nuxt-link>
-        <nuxt-link class="headerNav" to='/beastiary'>
+        <nuxt-link class="headerNav" to='/bestiary'>
           Bestiary
         </nuxt-link>
     </div>
