@@ -17,7 +17,7 @@ button {
   padding: 1em 1.5em 1em 1.5em;
   background-color: steelblue;
   color: whitesmoke;
-  border-radius: 5px;
+  border-color: steelblue;
 }
 .pageContainer {
   width: 35%;
@@ -35,15 +35,20 @@ button {
 .blockIcon {
   float: left;
   padding: 1em;
+  width: 100%;
 }
 .blockContent {
   font-size: 1em;
+  float: left;
+  width: 100%;
+  margin: 0.2em 0 0.2em 0;
 }
 .blockContent b {
   font-size: 1.5em;
 }
 .blockButton {
   width: 65%;
+  border-style: solid;
 }
 /* index.vue */
 .playerCount {
@@ -57,6 +62,8 @@ button {
   text-align: center;
   margin: 0 0 1em 0;
   padding: 1em 1em 1em 1em;
+  /* background-image: url("../assets/wallpapers/osrs_wallpaper_one.png");
+  background-size: cover; */
 }
 .indexContainer {
   width: 85%;
@@ -70,13 +77,15 @@ button {
 }
 .indexBlockDescription {
   float: left;
-  width: 50%;
+  width: 47%;
   margin: 0.5em 0 0.5em 0;
+  padding: 0.5em 0.5em 0.5em 0.5em;
 }
 .indexBlockLink {
-  width: 50%;
+  width: 47%;
   float: left;
   margin: 0.5em 0 0.5em 0;
+  padding: 0.5em 0.5em 0.5em 0.5em;
 }
 .border {
   margin: 1em 1em 1em 1em;
@@ -88,13 +97,13 @@ button {
 /* highscores.vue */
 .playerSearch {
   padding: 1em 1em 1em 1em;
-  margin: 2em 0 1.5em 0;
+  margin: 2em 0.5em 1.5em 0;
   width: 58%;
   float: left;
 }
 .searchButton {
   padding: 1em 1.5em 1em 1.5em;
-  margin: 2em 0 1.5em 0.6em;
+  margin: 2em 0 1.5em 0em;
   float: left;
 }
 .clearButton {
@@ -104,21 +113,34 @@ button {
 }
 .defaultResult {
   width: 100%;
-  box-shadow: 0 0 2px 2px lightgrey;
-  border-radius: 5px;
-  height: 450px;
   float: left;
   text-align: center;
+  padding: 0.2em 0.2em 0.2em 0.2em;
 }
 .alternateSearches {
   padding: 0.5em 0 1em 0;
   float: left;
   width: 100%;
+  padding: 0.2em 0.2em 0.2em 0.2em;
 }
 .alternateSearches button {
-  width: 33%;
+  color: black;
+  width: 100%;
   float: left;
-  font-size: 0.6em;
+  background-color: white;
+  border-color: white;
+  font-size: 0.8em;
+  border-style: solid;
+}
+.alternateButton {
+  float: left;
+  width: 32%;
+  padding: 0.2em 0.1em 0.2em 0.1em;
+}
+.searchContainer {
+  padding: 0.2em 0.2em 0.2em 0.2em;
+  width: 100%;
+  float: left;
 }
 /* bestiary.vue */
 .bestiaryCounters {
@@ -181,12 +203,10 @@ button {
 /* SearchResult.vue */
 .searchResult {
   width: 100%;
-  box-shadow: 0 0 2px 2px lightgrey;
-  border-radius: 5px;
-  height: 450px;
   float: left;
   text-align: left;
   overflow: auto;
+  padding: 0.2em 0.2em 0.2em 0.2em;
 }
 .searchResult p {
   padding: 0 0 0 1em;
@@ -224,8 +244,7 @@ button {
 }
 
 /* Media Queries */
-/* Desktop + */
-@media screen and (min-width: 1025px) {
+@media screen and (max-width: 1100px) {
   /* multiple page styles */
   .pageContainer {
     width: 35%;
@@ -250,5 +269,22 @@ button {
   }
   .blockContent b {
     font-size: 1.5em;
+  }
+  /* highscores.vue */
+  .playerSearch {
+    width: 50%;
+    padding: 0.5em 0.5em 0.5em 0.5em;
+  }
+  .searchButton {
+    padding: 0.5em 0.5em 0.5em 0.5em;
+    width: 20%;
+  }
+  .clearButton {
+    padding: 0.5em 0.5em 0.5em 0.5em;
+    width: 20%;
+  }
+  /* index.vue */
+  .indexContent {
+    width: 46%;
   }
 }

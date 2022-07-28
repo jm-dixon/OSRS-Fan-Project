@@ -1,20 +1,28 @@
 <template>
   <div>
     <div class="pageContainer">
-      <input id="playerInput" class="playerSearch" placeholder="Search Player..." />
+      <div class="searchContainer">
+        <input id="playerInput" class="playerSearch" placeholder="Search Player..." />
 
-      <button class="searchButton" type="button" @click="this.getPlayerData">
-        {{ searchButtonText }}
-      </button>
+        <button class="searchButton" type="button" @click="this.getPlayerData">
+          {{ searchButtonText }}
+        </button>
 
-      <button class="clearButton" type="button" @click="this.clearSearch">
-        {{ clearButtonText }}
-      </button>
+        <button class="clearButton" type="button" @click="this.clearSearch">
+          {{ clearButtonText }}
+        </button>
+      </div>
 
       <div class="alternateSearches">
-        <button type="button">Ironmen</button>
-        <button type="button">Hardcore Ironmen</button>
-        <button type="button">Ultimate Ironmen</button>
+        <div class="alternateButton">
+          <button type="button">Ironmen ></button>
+        </div>
+        <div class="alternateButton">
+           <button type="button">Ironmen (H) ></button>
+        </div>
+        <div class="alternateButton">
+          <button type="button">Ironmen (U) ></button>
+        </div>
       </div>
 
       <search-result v-if="this.playerToSearch != null" :playerToSearch="this.playerToSearch" />

@@ -54,8 +54,8 @@ export default {
           clearTimeout(timeout); }, 3000)
       } catch(error) {
         console.log(error);
+      }
     }
-  }
   },
   mounted() {
     this.getCurrentPlayerCount();
