@@ -1,10 +1,23 @@
 <template>
-  <div>
-    <p class="playerCount">
-      Players Online: {{ playerCount }}
-    </p>
+  <div class="indexPage">
+    <index-slideshow />
 
-    <div class="indexContainer">
+    <div class="fullWidthContainer">
+      <div class="indexContainer">
+        <div class="playerCount">
+          <div>
+            <p>
+              Players Online: <b>{{ playerCount }}</b>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <index-anchor />
+
+    <index-anchor />
+    <!--
       <highscores-block
         blockTitle="Leaderboards"
         blockData="
@@ -20,7 +33,7 @@
         "
         buttonLabel="Visit"
       />
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -29,9 +42,11 @@ import axios from 'axios'
 
 import HighscoresBlock from '../components/HighscoresBlock.vue'
 import BestiaryBlock from '../components/BestiaryBlock.vue'
+import IndexSlideshow from '../components/IndexSlideshow.vue'
+import IndexAnchor from '../components/IndexAnchor.vue'
 
 export default {
-  components: { HighscoresBlock, BestiaryBlock },
+  components: { HighscoresBlock, BestiaryBlock, IndexSlideshow, IndexAnchor },
   name: 'IndexPage',
   props: {
     /* No Props */

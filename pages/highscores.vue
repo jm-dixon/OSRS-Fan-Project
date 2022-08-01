@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="highscoresPage">
     <div class="pageContainer">
       <div class="searchContainer">
         <input id="playerInput" class="playerSearch" placeholder="Search Player..." />

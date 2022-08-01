@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="bestiaryPage">
     <div class="pageContainer">
       <p class="bestiaryCounters">
         Number of Bestiary

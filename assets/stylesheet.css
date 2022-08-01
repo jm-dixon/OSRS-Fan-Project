@@ -13,11 +13,19 @@ a {
   font-weight: 400;
 }
 /* multiple page styles */
+body {
+  margin: 0 !important;
+}
 button {
   padding: 1em 1.5em 1em 1.5em;
-  background-color: steelblue;
-  color: whitesmoke;
-  border-color: steelblue;
+  background-color: whitesmoke;
+  color: #272727;
+  border: 2px solid #272727;
+}
+.fullWidthContainer {
+  width: 100%;
+  float: left;
+  background-color: whitesmoke;
 }
 .pageContainer {
   width: 35%;
@@ -51,23 +59,53 @@ button {
   border-style: solid;
 }
 /* index.vue */
+.indexPage {
+  float: left;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
 .playerCount {
   text-align: center;
   font-size: 1.5em;
-  padding-top: 0.5em;
+  margin: 0;
+  padding: 1em 0 0 0;
+  float: left;
+  width: 100%;
+}
+.playerCount div {
+  border: 2px solid #272727;
+  margin: 0 auto 1em auto;
+  width: 45%;
+  padding: 0.5em 0 0.5em 0;
+}
+.playerCount p {
+ width: 100%;
+ margin: 0;
+ color: #272727;
+}
+.playerCount p b {
+  padding: 0.5em 0.5em 0.5em 0.5em;
+  margin: 0.5em 0 0.5em 0;
+  color: #272727;
 }
 .indexContent {
-  width: 47%;
+  width: 40%;
   float: left;
   text-align: center;
   margin: 0 0 1em 0;
   padding: 1em 1em 1em 1em;
-  /* background-image: url("../assets/wallpapers/osrs_wallpaper_one.png");
-  background-size: cover; */
 }
 .indexContainer {
-  width: 85%;
+  width: 60%;
   margin: 0 auto;
+  background-color: whitesmoke;
+  height: 100%;
+}
+.indexAnchor {
+  width: 100%;
+  float: left;
+  background-color: whitesmoke;
 }
 .indexBlockImage {
   margin: 0.5em 0.5em 0.5em 0.5em;
@@ -95,6 +133,12 @@ button {
   width: 94%;
 }
 /* highscores.vue */
+.highscoresPage {
+  float: left;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+}
 .playerSearch {
   padding: 1em 1em 1em 1em;
   margin: 2em 0.5em 1.5em 0;
@@ -143,6 +187,12 @@ button {
   float: left;
 }
 /* bestiary.vue */
+.bestiaryPage {
+  float: left;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+}
 .bestiaryCounters {
   float: left;
   width: 50%;
@@ -170,10 +220,7 @@ button {
 /* AppFooter.vue */
 .footerNavbar {
   text-align: left;
-  background-color: steelblue;
-  position: fixed;
-  bottom: 0;
-  left: 0;
+  background-color: #272727;
   width: 100%;
   float: left;
 }
@@ -185,19 +232,15 @@ button {
 /* AppHeader.vue */
 .headerNavbar {
   text-align: right;
-  background-color: steelblue;
+  background-color: #272727;
   float: left;
   width:100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding: 0 1em 0 0;
 }
 .headerNavbar a {
   text-decoration: none;
-  font-size: 0.8em;
+  font-size: 1em;
   color: whitesmoke;
-  padding: 2em 1.5em 2em 1.5em;
+  padding: 1.5em 1.5em 1.5em 1.5em;
   float: right;
 }
 /* SearchResult.vue */
@@ -242,7 +285,40 @@ button {
   padding: 0 0.5em 0 0.5em;
   text-decoration: underline;
 }
-
+/* IndexSlideshow.vue */
+.slideshow {
+  float: left;
+  width: 100%;
+  /* NOT NEEDED AFTER IMAGE CORRECTION */
+  max-height: 850px;
+  overflow: hidden;
+}
+.slideshow img {
+  float: left;
+  width: 100%;
+  /* REMOVE THIS ONCE IMAGE SIZES ARE FIXED */
+  height: 850px;
+}
+/* REFACTOR THIS WHEN IMAGES ARE FIXED */
+.slideshowContent {
+  font-size: 2em;
+  color: whitesmoke;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+}
+/* REFACTOR THIS WHEN IMAGES ARE FIXED */
+.slideshowContent p {
+  width: 45%;
+  margin: 1em auto;
+  padding: 1em 1em 1em 1em;
+  text-align: justify;
+}
+/* REFACTOR THIS WHEN IMAGES ARE FIXED */
+.slideshowButton {
+  background-color: transparent;
+  border-color: whitesmoke;
+}
 /* Media Queries */
 @media screen and (max-width: 1100px) {
   /* multiple page styles */
