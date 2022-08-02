@@ -40,24 +40,6 @@ button {
   padding: 1em;
   text-align: center;
 }
-.blockIcon {
-  float: left;
-  padding: 1em;
-  width: 100%;
-}
-.blockContent {
-  font-size: 1em;
-  float: left;
-  width: 100%;
-  margin: 0.2em 0 0.2em 0;
-}
-.blockContent b {
-  font-size: 1.5em;
-}
-.blockButton {
-  width: 65%;
-  border-style: solid;
-}
 /* index.vue */
 .indexPage {
   float: left;
@@ -106,31 +88,7 @@ button {
   width: 100%;
   float: left;
   background-color: whitesmoke;
-}
-.indexBlockImage {
-  margin: 0.5em 0.5em 0.5em 0.5em;
-  padding: 0.5em 0.5em 0.5em 0.5em;
-  float: left;
-  width: 40%;
-}
-.indexBlockDescription {
-  float: left;
-  width: 47%;
-  margin: 0.5em 0 0.5em 0;
-  padding: 0.5em 0.5em 0.5em 0.5em;
-}
-.indexBlockLink {
-  width: 47%;
-  float: left;
-  margin: 0.5em 0 0.5em 0;
-  padding: 0.5em 0.5em 0.5em 0.5em;
-}
-.border {
-  margin: 1em 1em 1em 1em;
-  background-color: whitesmoke;
-  border-radius: 8px;
-  float: left;
-  width: 94%;
+  font-size: 1.5em;
 }
 /* highscores.vue */
 .highscoresPage {
@@ -318,6 +276,22 @@ button {
 .slideshowButton {
   background-color: transparent;
   border-color: whitesmoke;
+}
+/* AnchorBlock.vue */
+.conditionalButton {
+  color: whitesmoke;
+  background-color: #272727;
+}
+.anchorBlock {
+  float: left;
+  width: 100%;
+  padding: 1em 1em 1em 1em;
+}
+.anchorTitle {
+  width: 50%;
+}
+.anchorData {
+  width: 50%;
 }
 /* Media Queries */
 @media screen and (max-width: 1100px) {

@@ -14,9 +14,11 @@
       </div>
     </div>
 
-    <index-anchor />
+    <index-anchor anchorPurpose="highscores" />
 
-    <index-anchor />
+    <index-anchor anchorPurpose="bestiary" />
+
+    <index-anchor anchorPurpose="project" />
     <!--
       <highscores-block
         blockTitle="Leaderboards"
@@ -38,15 +40,14 @@
 </template>
 
 <script>
+// imports
 import axios from 'axios'
 
-import HighscoresBlock from '../components/HighscoresBlock.vue'
-import BestiaryBlock from '../components/BestiaryBlock.vue'
 import IndexSlideshow from '../components/IndexSlideshow.vue'
 import IndexAnchor from '../components/IndexAnchor.vue'
 
 export default {
-  components: { HighscoresBlock, BestiaryBlock, IndexSlideshow, IndexAnchor },
+  components: { IndexSlideshow, IndexAnchor },
   name: 'IndexPage',
   props: {
     /* No Props */
