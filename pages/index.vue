@@ -7,7 +7,10 @@
         <div class="playerCount">
           <div>
             <p>
-              Players Online: <b>{{ playerCount }}</b>
+              Players Online:
+              <b>
+                {{ playerCount }}
+              </b>
             </p>
           </div>
         </div>
@@ -19,6 +22,8 @@
     <index-anchor anchorPurpose="bestiary" />
 
     <index-anchor anchorPurpose="project" />
+
+    <index-anchor anchorPurpose="statistics" />
     <!--
       <highscores-block
         blockTitle="Leaderboards"

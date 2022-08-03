@@ -33,6 +33,16 @@ const getBeastiaryEntry = async(beastid) => {
   }
 }
 
+const getTotalAccounts = async() => {
+  try {
+    const { data } = await axios.get(`https://secure.runescape.com/m=account-creation-reports/rsusertotal.ws`)
+
+    return data
+  } catch(error) {
+    console.log(error);
+  }
+}
+
 app.get('/playerCount', async(req, res) => {
   const playerCount = await getCurrentPlayerCount()
   res.send(playerCount)
@@ -46,6 +56,11 @@ app.get('/getHighscores', async(req, res) => {
 app.get('/testBeastiaryEntry', async(req, res) => {
   const beastiaryEntry = await getBeastiaryEntry(req.query.beastid)
   res.send(beastiaryEntry)
+})
+
+app.get('/totalAccounts', async(req, res) => {
+  const totalAccounts = await getTotalAccounts()
+  res.send(totalAccounts)
 })
 
 export default app

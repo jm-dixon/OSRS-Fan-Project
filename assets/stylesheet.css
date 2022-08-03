@@ -3,14 +3,21 @@
 p {
   font-family: 'Kanit', sans-serif;
   font-weight: 200;
+  color: #272727;
 }
 hgroup {
   font-family: 'Kanit', sans-serif;
   font-weight: 200;
+  color: #272727;
 }
 a {
   font-family: 'Kanit', sans-serif;
   font-weight: 400;
+  text-decoration: none;
+}
+li {
+  font-family: 'Kanit', sans-serif;
+  font-weight: 200;
 }
 /* multiple page styles */
 body {
@@ -64,7 +71,6 @@ button {
 .playerCount p {
  width: 100%;
  margin: 0;
- color: #272727;
 }
 .playerCount p b {
   padding: 0.5em 0.5em 0.5em 0.5em;
@@ -187,6 +193,16 @@ button {
   padding: 1em;
   float: left;
 }
+.footerLinks {
+  padding: 0.5em 0.5em 0.5em 0.5em;
+  float: left;
+}
+.footerLinks li {
+  color: whitesmoke;
+  text-decoration: none;
+  padding: 0.2em 0.2em 0.2em 0.2em;
+  list-style: none;
+}
 /* AppHeader.vue */
 .headerNavbar {
   text-align: right;
@@ -285,13 +301,36 @@ button {
 .anchorBlock {
   float: left;
   width: 100%;
-  padding: 1em 1em 1em 1em;
+  padding: 1em 0 1em 0;
+  margin: 0.5em 0 0.5em 0;
 }
 .anchorTitle {
   width: 50%;
 }
 .anchorData {
   width: 50%;
+}
+/* StatisticsBlock.vue */
+.statisticsBlock {
+  width: 45%;
+  border: 1px solid #272727;
+  float: left;
+  padding: 0.5em 0.5em 0.5em 0.5em;
+  margin: 0.5em 0.2em 0.5em 0.2em;
+}
+.statisticsTitle {
+  width: 100%;
+  text-align: center;
+}
+.statisticsSubTitle {
+  font-size: 0.5em;
+  width: 100%;
+  text-align: center;
+}
+.statisticsData {
+  font-size: 2em;
+  text-align: center;
+  margin: 0;
 }
 /* Media Queries */
 @media screen and (max-width: 1100px) {
@@ -336,5 +375,13 @@ button {
   /* index.vue */
   .indexContent {
     width: 46%;
+  }
+  /* StatisticsBlock.vue */
+  .statisticsBlock {
+    width: 35%;
+    border: 1px solid #272727;
+    float: left;
+    padding: 0.5em 0.5em 0.5em 0.5em;
+    margin: 0.5em 0.5em 0.5em 0.5em;
   }
 }

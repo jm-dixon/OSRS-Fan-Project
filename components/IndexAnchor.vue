@@ -34,15 +34,21 @@
         blockButtonLabel="Github Repository"
       />
     </div>
+    <div v-else-if="this.anchorPurpose = 'statistics'">
+      <statistics-block
+        blockTitle="Game Statistics"
+      />
+    </div>
   </div>
 </template>
 
 <script>
 // imports
 import AnchorBlock from './AnchorBlock.vue'
+import StatisticsBlock from './StatisticsBlock.vue'
 
 export default {
-  components: { AnchorBlock },
+  components: { AnchorBlock, StatisticsBlock },
   name: 'IndexAnchor',
   props: {
     anchorPurpose: String

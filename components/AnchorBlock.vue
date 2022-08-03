@@ -2,7 +2,9 @@
   <div class="anchorBlock">
     <div class="indexContainer">
       <p class="anchorTitle">
-        <b>{{ blockTitle }}</b>
+        <b>
+          {{ blockTitle }}
+        </b>
       </p>
       <p class="anchorData">
         {{ blockData }}
