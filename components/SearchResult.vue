@@ -77,6 +77,7 @@ export default {
   name: 'SearchResult',
   props: {
     playerToSearch: String,
+    accountType: String
   },
   data() {
     return {

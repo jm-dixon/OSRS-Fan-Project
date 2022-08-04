@@ -35,7 +35,7 @@ button {
   background-color: whitesmoke;
 }
 .pageContainer {
-  width: 35%;
+  width: 45%;
   margin: 0 auto;
 }
 .content {
@@ -45,6 +45,11 @@ button {
   border: 1px solid lightgray;
   box-shadow: 0 0 1px 1px lightgrey;
   padding: 1em;
+  text-align: center;
+}
+.subPageTitle {
+  font-size: 1.5em;
+  width: 100%;
   text-align: center;
 }
 /* index.vue */
@@ -100,24 +105,36 @@ button {
 .highscoresPage {
   float: left;
   width: 100%;
-  height: 100vh;
-  background-size: cover;
+  background-color: whitesmoke;
 }
-.playerSearch {
-  padding: 1em 1em 1em 1em;
-  margin: 2em 0.5em 1.5em 0;
-  width: 58%;
+.searchContainer {
+  padding: 0.5em 0.5em 0.5em 0.5em;
+  width: 100%;
+  float: left;
+  margin: 1em 0 1em 0;
+  border: 2px solid whitesmoke;
+}
+.highscoresSearch {
+  width: 55%;
   float: left;
 }
-.searchButton {
-  padding: 1em 1.5em 1em 1.5em;
-  margin: 2em 0 1.5em 0em;
+.highscoresSearch input {
+  width: 100%;
   float: left;
+  padding: 1em 0 1em 1em;
+  border: 2px solid #272727;
 }
-.clearButton {
-  padding: 1em 1.5em 1em 1.5em;
-  margin: 2em 0 1.5em 0;
+.highscoreButtons {
+  width: 41%;
   float: right;
+}
+.highscoreButtons button {
+  width: 48%;
+  border: 2px solid #272727;
+  padding: 1em 0 1em 0;
+  margin: 0;
+  float: left;
+  margin: 0 0.25em 0 0;
 }
 .defaultResult {
   width: 100%;
@@ -126,29 +143,34 @@ button {
   padding: 0.2em 0.2em 0.2em 0.2em;
 }
 .alternateSearches {
-  padding: 0.5em 0 1em 0;
+  padding: 0.5em 0.5em 0.5em 0.5em;
+  border: 2px solid whitesmoke;
   float: left;
   width: 100%;
-  padding: 0.2em 0.2em 0.2em 0.2em;
+}
+.alternateSearches div {
+  width: 32%;
+  float: left;
+  margin: 0.5em 0.25em 0.5em 0.25em;
 }
 .alternateSearches button {
-  color: black;
   width: 100%;
   float: left;
-  background-color: white;
-  border-color: white;
-  font-size: 0.8em;
-  border-style: solid;
+  background-color: #272727;
+  color: whitesmoke;
 }
-.alternateButton {
-  float: left;
-  width: 32%;
-  padding: 0.2em 0.1em 0.2em 0.1em;
+.groupButtons {
+  width: 48% !important;
 }
-.searchContainer {
-  padding: 0.2em 0.2em 0.2em 0.2em;
-  width: 100%;
-  float: left;
+.hardcoreGroup {
+  margin: 0.5em 0.25em 0.5em 0.25em !important;
+  float: right !important;
+}
+.groupButtons button {
+  width: 100% !important;
+}
+.hardcoreButton {
+  float: right !important;
 }
 /* bestiary.vue */
 .bestiaryPage {
@@ -313,7 +335,7 @@ button {
 /* StatisticsBlock.vue */
 .statisticsBlock {
   width: 45%;
-  border: 1px solid #272727;
+  border: 2px solid #272727;
   float: left;
   padding: 0.5em 0.5em 0.5em 0.5em;
   margin: 0.5em 0.2em 0.5em 0.2em;
@@ -336,7 +358,7 @@ button {
 @media screen and (max-width: 1100px) {
   /* multiple page styles */
   .pageContainer {
-    width: 35%;
+    width: 60%;
     margin: 0 auto;
   }
   .content {
@@ -363,10 +385,6 @@ button {
   .playerSearch {
     width: 50%;
     padding: 0.5em 0.5em 0.5em 0.5em;
-  }
-  .searchButton {
-    padding: 0.5em 0.5em 0.5em 0.5em;
-    width: 20%;
   }
   .clearButton {
     padding: 0.5em 0.5em 0.5em 0.5em;
