@@ -89,19 +89,19 @@ export default {
       }
       if (value == 'Ironmen') {
         this.searchPlaceholder = 'Search Ironmen...';
-        this.accountType = 'ironman';
+        this.accountType = '_ironman';
       } else if (value == 'Hardcore Ironmen') {
         this.searchPlaceholder = 'Search Hardcore Ironmen...';
-        this.accountType = 'hardcore_ironman';
+        this.accountType = '_hardcore_ironman';
       } else if (value.includes('mate')) {
         this.searchPlaceholder = 'Search Ultimate Ironmen...';
-        this.accountType = 'ultimate';
+        this.accountType = '_ultimate';
       } else if (value.includes('Hardcore Group')) {
         this.searchPlaceholder = 'Search Hardcore Group Ironmen...';
-        this.accountType = '';
+        this.accountType = '_hardcore_ironman/group-ironman';
       } else {
         this.searchPlaceholder = 'Search Group Ironmen...';
-        this.accountType = '';
+        this.accountType = '_ironman/group-ironman';
       }
     }
   },

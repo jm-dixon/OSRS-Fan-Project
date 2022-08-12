@@ -117,7 +117,7 @@ export default {
   methods: {
     async getPlayerHighscores() {
       try {
-        const { data } = await axios.get(`/proxy/getHighscores?player=${this.playerToSearch}`)
+        const { data } = await axios.get(`/proxy/getHighscores?player=${this.playerToSearch}&account=${this.accountType}`)
         this.formatOutput(data);
       } catch(error) {
         console.log(error);

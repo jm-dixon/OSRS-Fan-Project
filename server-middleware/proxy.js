@@ -13,13 +13,23 @@ const getCurrentPlayerCount = async() => {
   }
 }
 
-const getPlayerHighscores = async(player) => {
-  try {
-    const { data } = await axios.get(`https://secure.runescape.com/m=hiscore_oldschool/index_lite.ws?player=${player}`)
+const getPlayerHighscores = async(player, account) => {
+  if (account == 'null') {
+    try {
+      const { data } = await axios.get(`https://secure.runescape.com/m=hiscore_oldschool/index_lite.ws?player=${player}`);
 
-    return data
-  } catch(error) {
-    console.log(error);
+      return data
+    } catch(error) {
+      console.log(error);
+    }
+  } else {
+    try {
+      const { data } = await axios.get(`https://secure.runescape.com/m=hiscore_oldschool${account}/index_lite.ws?player=${player}`)
+
+      return data
+    } catch(error) {
+      console.log(error);
+    }
   }
 }
 
@@ -49,7 +59,7 @@ app.get('/playerCount', async(req, res) => {
 })
 
 app.get('/getHighscores', async(req, res) => {
-  const playerHighscores = await getPlayerHighscores(req.query.player)
+  const playerHighscores = await getPlayerHighscores(req.query.player, req.query.account)
   res.send(playerHighscores)
 })
 
