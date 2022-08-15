@@ -38,6 +38,23 @@
         <div class="groupButtons hardcoreGroup">
           <button class="hardcoreButton" type="button" @click="updateSearchParameters">Hardcore Group Ironmen</button>
         </div>
+
+        <div class="groupSizeButtons" v-if="accountType == '_ironman/group-ironman' || this.accountType == '_hardcore_ironman/group-ironman'">
+          <div>
+            <div class="teamSizeContainers">
+              <button>2s</button>
+            </div>
+            <div class="teamSizeContainers">
+              <button>3s</button>
+            </div>
+            <div class="teamSizeContainers">
+              <button>4s</button>
+            </div>
+            <div class="teamSizeContainers">
+              <button>5s</button>
+            </div>
+          </div>
+        </div>
       </div>
 
       <search-result v-if="this.playerToSearch != null"
