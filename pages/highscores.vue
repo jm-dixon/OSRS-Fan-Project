@@ -61,9 +61,24 @@
         :playerToSearch="this.playerToSearch"
         :accountType="this.accountType"
       />
+
+      <!--
+
+      <group-highscores v-if="this.accountType == '_ironman/group-ironman' || this.accountType = '_hardcore_ironman/group-ironman'"
+        :playerToSearch="this.playerToSearch"
+        :accountType="this.accountType"
+        :groupSize="this.groupSize"
+      />
+
+      <default-highscores v-if="this.playerToSearch == null"
+
+      />
+
+      -->
+
       <div v-else class="defaultResult">
         <p>
-          No Player Name Entered
+          <b>Overall Highscores</b> | Top 50 Players
         </p>
       </div>
     </div>
