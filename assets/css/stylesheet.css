@@ -31,8 +31,10 @@ button {
 }
 .fullWidthContainer {
   width: 100%;
-  float: left;
+  display: flex;
   background-color: whitesmoke;
+  justify-content: center;
+  align-items: center;
 }
 .pageContainer {
   width: 45%;
@@ -40,7 +42,7 @@ button {
 }
 .content {
   max-width: 35%;
-  float: left;
+  display: flex;
   margin: 0.5em 0.8em 1em 0.8em;
   border: 1px solid lightgray;
   box-shadow: 0 0 1px 1px lightgrey;
@@ -54,7 +56,6 @@ button {
 }
 /* index.vue */
 .indexPage {
-  float: left;
   width: 100%;
   height: 100%;
   background-size: cover;
@@ -64,7 +65,7 @@ button {
   font-size: 1.5em;
   margin: 0;
   padding: 1em 0 0 0;
-  float: left;
+  display: flex;
   width: 100%;
 }
 .playerCount div {
@@ -84,43 +85,46 @@ button {
 }
 .indexContent {
   width: 40%;
-  float: left;
+  display: flex;
   text-align: center;
   margin: 0 0 1em 0;
   padding: 1em 1em 1em 1em;
 }
 .indexContainer {
-  width: 60%;
-  margin: 0 auto;
+  width: 100%;
   background-color: whitesmoke;
-  height: 100%;
+}
+.Index__playerCount-container {
+  width: 60%;
+  background-color: whitesmoke;
 }
 .indexAnchor {
   width: 100%;
-  float: left;
+  display: flex;
   background-color: whitesmoke;
   font-size: 1.5em;
+  justify-content: center;
 }
 /* highscores.vue */
 .highscoresPage {
-  float: left;
+  display: flex;
   width: 100%;
   background-color: whitesmoke;
 }
 .searchContainer {
   padding: 0.5em 0.5em 0.5em 0.5em;
   width: 100%;
-  float: left;
+  display: flex;
   margin: 1em 0 1em 0;
   border: 2px solid whitesmoke;
 }
 .highscoresSearch {
   width: 55%;
-  float: left;
+  display: flex;
 }
 .highscoresSearch input {
   width: 100%;
-  float: left;
+  display: flex;
   padding: 1em 0 1em 1em;
   border: 2px solid #272727;
 }
@@ -133,29 +137,29 @@ button {
   border: 2px solid #272727;
   padding: 1em 0 1em 0;
   margin: 0;
-  float: left;
+  display: flex;
   margin: 0 0.25em 0 0;
 }
 .defaultResult {
   width: 100%;
-  float: left;
+  display: flex;
   text-align: center;
   padding: 0.2em 0.2em 0.2em 0.2em;
 }
 .alternateSearches {
   padding: 0.5em 0.5em 0.5em 0.5em;
   border: 2px solid whitesmoke;
-  float: left;
+  display: flex;
   width: 100%;
 }
 .alternateSearches div {
   width: 32%;
-  float: left;
+  display: flex;
   margin: 0.5em 0.25em 0.5em 0.25em;
 }
 .alternateSearches button {
   width: 100%;
-  float: left;
+  display: flex;
   background-color: #272727;
   color: whitesmoke;
 }
@@ -174,7 +178,7 @@ button {
 }
 .groupSizeButtons {
   width: 100% !important;
-  float: left;
+  display: flex;
 }
 .groupSizeButtons div {
   width: 65%;
@@ -199,20 +203,20 @@ button {
 }
 /* bestiary.vue */
 .bestiaryPage {
-  float: left;
+  display: flex;
   width: 100%;
   height: 100vh;
   background-size: cover;
 }
 .bestiaryCounters {
-  float: left;
+  display: flex;
   width: 50%;
   text-align: center;
   padding: 1em 0 1em 0;
   font-size: 1em;
 }
 .bestiaryOutput {
-  float: left;
+  display: flex;
   width: 100%;
   border: 1px solid black;
   padding: 1em 1em 1em 1em;
@@ -222,27 +226,27 @@ button {
 }
 .entriesInformation {
   width: 100%;
-  float: left;
+  display: flex;
 }
 /* default.vue */
 .defaultContent {
-  padding-top: 50px;
+
 }
 /* AppFooter.vue */
 .footerNavbar {
   text-align: left;
   background-color: #272727;
   width: 100%;
-  float: left;
+  display: flex;
 }
 .footerCopyright {
   color: whitesmoke;
   padding: 1em;
-  float: left;
+  display: flex;
 }
 .footerLinks {
   padding: 0.5em 0.5em 0.5em 0.5em;
-  float: left;
+  display: flex;
 }
 .footerLinks li {
   color: whitesmoke;
@@ -254,8 +258,9 @@ button {
 .headerNavbar {
   text-align: right;
   background-color: #272727;
-  float: left;
+  display: flex;
   width:100%;
+  justify-content: flex-end;
 }
 .headerNavbar a {
   text-decoration: none;
@@ -267,7 +272,7 @@ button {
 /* SearchResult.vue */
 .searchResult {
   width: 100%;
-  float: left;
+  display: flex;
   text-align: left;
   overflow: auto;
   padding: 0.2em 0.2em 0.2em 0.2em;
@@ -308,14 +313,14 @@ button {
 }
 /* IndexSlideshow.vue */
 .slideshow {
-  float: left;
+  display: flex;
   width: 100%;
   /* NOT NEEDED AFTER IMAGE CORRECTION */
   max-height: 850px;
   overflow: hidden;
 }
 .slideshow img {
-  float: left;
+  display: flex;
   width: 100%;
   /* REMOVE THIS ONCE IMAGE SIZES ARE FIXED */
   height: 850px;
@@ -346,7 +351,7 @@ button {
   background-color: #272727;
 }
 .anchorBlock {
-  float: left;
+  display: flex;
   width: 100%;
   padding: 1em 0 1em 0;
   margin: 0.5em 0 0.5em 0;
@@ -358,10 +363,13 @@ button {
   width: 50%;
 }
 /* StatisticsBlock.vue */
+.statisticsContainer {
+  display: flex;
+  justify-content: center;
+}
 .statisticsBlock {
   width: 45%;
   border: 2px solid #272727;
-  float: left;
   padding: 0.5em 0.5em 0.5em 0.5em;
   margin: 0.5em 0.2em 0.5em 0.2em;
 }
@@ -388,7 +396,7 @@ button {
   }
   .content {
     max-width: 35%;
-    float: left;
+    display: flex;
     margin: 0.5em 0.8em 1em 0.8em;
     border: 1px solid lightgray;
     box-shadow: 0 0 1px 1px lightgrey;
@@ -396,7 +404,7 @@ button {
     text-align: center;
   }
   .blockIcon {
-    float: left;
+    display: flex;
     width: 100%;
     padding: 0 0 0.5em 0;
   }
@@ -423,7 +431,7 @@ button {
   .statisticsBlock {
     width: 35%;
     border: 1px solid #272727;
-    float: left;
+    display: flex;
     padding: 0.5em 0.5em 0.5em 0.5em;
     margin: 0.5em 0.5em 0.5em 0.5em;
   }

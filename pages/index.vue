@@ -3,7 +3,7 @@
     <index-slideshow />
 
     <div class="fullWidthContainer">
-      <div class="indexContainer">
+      <div class="Index__playerCount-container">
         <div class="playerCount">
           <div>
             <p>
