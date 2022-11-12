@@ -52,4 +52,9 @@ does not include colours, colour vars are located in colours.css
     /* 
     text vars 
     */
+    --align-center: text-align: center;
+    --align-left: text-align: left;
+    --align-right: text-align: right;
+    --align-justify: text-align: justify;
+    --align-inherit: text-align: inherit;
 }
