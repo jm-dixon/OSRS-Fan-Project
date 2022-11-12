@@ -37,16 +37,10 @@ import IndexAnchor from '../components/IndexAnchor.vue'
 export default {
   components: { IndexSlideshow, IndexAnchor },
   name: 'IndexPage',
-  props: {
-    /* No Props */
-  },
   data() {
     return {
       playerCount: null,
     }
-  },
-  computed: {
-    /* No Computed */
   },
   methods: {
     async getCurrentPlayerCount() {
@@ -82,5 +76,22 @@ export default {
   margin: 0;
   padding-top: var(--padding-md);
   width: 100%;
+}
+.Index__playerCount div {
+  border: 2px solid  var(--color-grey);
+  margin: 0 auto 1em auto;
+  width: 45%;
+  padding-top: var(--padding-sm);
+  padding-bottom: var(--padding-sm);
+}
+.Index__playerCount p {
+ width: 100%;
+ margin: 0;
+}
+.Index__playerCount p b {
+  padding: var(--padding-sm);
+  margin-top: var(--margin-sm);
+  margin-bottom: var(--margin-sm);
+  color: var(--color-grey);
 }
 </style>

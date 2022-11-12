@@ -53,21 +53,6 @@ button {
   height: 100%;
   background-size: cover;
 }
-.playerCount div {
-  border: 2px solid #272727;
-  margin: 0 auto 1em auto;
-  width: 45%;
-  padding: 0.5em 0 0.5em 0;
-}
-.playerCount p {
- width: 100%;
- margin: 0;
-}
-.playerCount p b {
-  padding: 0.5em 0.5em 0.5em 0.5em;
-  margin: 0.5em 0 0.5em 0;
-  color: #272727;
-}
 .indexContent {
   width: 40%;
   display: flex;
