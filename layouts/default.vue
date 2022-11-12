@@ -7,9 +7,3 @@
     <app-footer />
   </div>
 </template>
-
-<style scoped>
-  .defaultContent {
-    padding-top: 50px;
-  }
-</style>

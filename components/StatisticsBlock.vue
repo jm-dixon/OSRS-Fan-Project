@@ -5,34 +5,37 @@
         <b>
           {{ blockTitle }}</b>
       </p>
-      <div class="statisticsBlock">
-        <p class="statisticsTitle">
-          <b>
-            {{ playerCountTitle }}</b>
-        </p>
-        <p class="statisticsData">
-          <b>
-            {{ playerCount }}
-          </b>
-        </p>
-        <p class="statisticsSubTitle">
-          {{ playerSub }}
-        </p>
-      </div>
-      <div class="statisticsBlock">
-        <p class="statisticsTitle">
-          <b>
-            {{ totalAccountsTitle }}
-          </b>
-        </p>
-        <p class="statisticsData">
-          <b>
-            {{ totalAccounts }}
-          </b>
-        </p>
-        <p class="statisticsSubTitle">
-          {{ totalSub }}
-        </p>
+      <div class="statisticsContainer">
+        <div class="statisticsBlock">
+          <p class="statisticsTitle">
+            <b>
+              {{ playerCountTitle }}
+            </b>
+          </p>
+          <p class="statisticsData">
+            <b>
+              {{ playerCount }}
+            </b>
+          </p>
+          <p class="statisticsSubTitle">
+            {{ playerSub }}
+          </p>
+        </div>
+        <div class="statisticsBlock">
+          <p class="statisticsTitle">
+            <b>
+              {{ totalAccountsTitle }}
+            </b>
+          </p>
+          <p class="statisticsData">
+            <b>
+              {{ totalAccounts }}
+            </b>
+          </p>
+          <p class="statisticsSubTitle">
+            {{ totalSub }}
+          </p>
+        </div>
       </div>
     </div>
   </div>

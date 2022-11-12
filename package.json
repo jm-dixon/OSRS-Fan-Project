@@ -9,13 +9,16 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@babel/preset-env": "^7.12.13",
     "axios": "^0.27.2",
-    "core-js": "^3.19.3",
+    "core-js": "^2.6.5",
     "express": "^4.18.1",
-    "nuxt": "^2.15.8",
+    "nuxt": "^2.13.3",
     "vue": "^2.6.14",
     "vue-server-renderer": "^2.6.14",
-    "vue-template-compiler": "^2.6.14",
-    "webpack": "^4.46.0"
+    "vue-template-compiler": "^2.6.14"
+  },
+  "devDependencies": {
+    "webpack": "^4.0.0"
   }
 }

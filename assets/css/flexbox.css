@@ -1,0 +1,145 @@
+/*
+css styles for flexbox
+
+examples: 
+
+flex container examples:
+
+    { flex ff-r-nw jc-c ai-c } ->  { display: flex; flex-flow: row nowrap; justify-content: center; align-items: center; }
+    { flex ff-c-wr jc-sb ai-fs } -> { display: flex; flex-flow: column wrap-reverse; justify-content: space-between; align-items: flex-start; }
+
+flex item examples:
+
+    { o1 fb-md as-c } -> { order: 1; flex-basis: 50%; align-self: center; }
+    { o3 fb-xl as-fs } -> { order: 3; flex-basis: 90%; align-self: flex-start; }
+*/
+
+/*
+styles for flex containers
+*/
+.flex {
+    display: flex;
+}
+.ff-r-w {
+    flex-flow: row wrap;
+}
+.ff-r-wr {
+    flex-flow: row wrap-reverse;
+}
+.ff-r-nw {
+    flex-flow: row nowrap;
+}
+.ff-c-w {
+    flex-flow: column wrap;
+}
+.ff-c-wr {
+    flex-flow: column wrap-reverse;
+}
+.ff-c-nw {
+    flex-flow: column nowrap;
+}
+.jc-c {
+    justify-content: center;
+}
+.jc-fs {
+    justify-content: flex-start;
+}
+.jc-fe {
+    justify-content: flex-end;
+}
+.jc-sa {
+    justify-content: space-around;
+}
+.jc-sb {
+    justify-content: space-between;
+}
+.jc-b {
+    justify-content: baseline;
+}
+.ai-c {
+    align-items: center;
+}
+.ai-fs {
+    align-items: flex-start;
+}
+.ai-fe {
+    align-items: flex-end;
+}
+.ai-s {
+    align-items: stretch;
+}
+.ai-b {
+    align-items: baseline;
+}
+.ac-c {
+    align-content: center;
+}
+.ac-fs {
+    align-content: flex-start;
+}
+.ac-fe {
+    align-content: flex-end;
+}
+.ac-s {
+    align-content: stretch;
+}
+.ac-sb {
+    align-content: space-between;
+}
+.ac-sa {
+    align-content: space-around;
+}
+/*
+styles for flex items 
+
+order presets support up to 6 flex items
+flex basis presets support up to 5 sizes of flex item
+*/
+.o1 { 
+    order: 1; 
+} 
+.o2 { 
+    order: 2; 
+}
+.o3 {
+    order: 3;
+}
+.o4 {
+    order: 4;
+}
+.o5 {
+    order: 5;
+}
+.o6 {
+    order: 6;
+}
+.fb-xs {
+    flex-basis: 10%;
+}
+.fb-sm {
+    flex-basis: 25%;
+}
+.fb-md {
+    flex-basis: 50%;
+}
+.fb-lg {
+    flex-basis: 75%;
+}
+.fb-xl {
+    flex-basis: 90%;
+}
+.as-c {
+    align-self: center;
+}
+.as-fs {
+    align-self: flex-start;
+}
+.as-fe {
+    align-self: flex-end;
+}
+.as-s {
+    align-self: stretch;
+}
+.as-b {
+    align-self: baseline;
+}
