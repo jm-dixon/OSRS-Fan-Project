@@ -1,41 +1,41 @@
 <template>
-  <div class="highscoresPage">
-    <div class="pageContainer">
-      <p class="subPageTitle">
+  <div class="Highscores__page flex">
+    <div class="Highscores__pageContainer">
+      <p class="Highscores__subPageTitle">
         <b>
           {{ pageHeader }}
         </b>
       </p>
-      <p class="statisticsSubTitle">
+      <p class="Highscores__statisticsSubTitle">
         {{ dataSource }}
       </p>
-      <div class="searchContainer">
-        <div class="highscoresSearch">
-          <input id="playerInput" :placeholder="this.searchPlaceholder" />
+      <div class="Highscores__searchContainer flex">
+        <div class="Highscores__highscoresSearch flex">
+          <input class="flex" id="playerInput" :placeholder="this.searchPlaceholder" />
         </div>
-        <div class="highscoreButtons">
-          <button class="searchButton" type="button" @click="this.getPlayerData">
+        <div class="Highscores__highscoreButtons">
+          <button class="flex" type="button" @click="this.getPlayerData">
             Search
           </button>
-          <button class="conditionalButton" type="button" @click="this.clearSearch">
+          <button class="flex" type="button" @click="this.clearSearch">
             Clear
           </button>
         </div>
       </div>
-      <div class="alternateSearches">
-        <div>
-          <button type="button" @click="updateSearchParameters">Ironmen</button>
+      <div class="Highscores__alternateSearches flex">
+        <div class="flex">
+          <button class="flex" type="button" @click="updateSearchParameters">Ironmen</button>
         </div>
-        <div>
-          <button type="button" @click="updateSearchParameters">Hardcore Ironmen</button>
+        <div class="flex">
+          <button class="flex" type="button" @click="updateSearchParameters">Hardcore Ironmen</button>
         </div>
-        <div>
-          <button type="button" @click="updateSearchParameters">Ultimate Ironmen</button>
+        <div class="flex">
+          <button class="flex" type="button" @click="updateSearchParameters">Ultimate Ironmen</button>
         </div>
-        <div class="groupButtons">
+        <div class="Highscores__groupButtons">
           <button class="groupButton" type="button" @click="updateSearchParameters">Group Ironmen</button>
         </div>
-        <div class="groupButtons hardcoreGroup">
+        <div class="Highscores__groupButtons hardcoreGroup">
           <button class="hardcoreButton" type="button" @click="updateSearchParameters">Hardcore Group Ironmen</button>
         </div>
 
@@ -139,3 +139,73 @@ export default {
   },
 }
 </script>
+
+<style type="text/css">
+.Highscores__page {
+  width: 100%;
+  background-color: var(--color-whiteSmoke);
+}
+.Highscores__pageContainer {
+  width: 45%;
+  margin: 0 auto;
+}
+.Highscores__subPageTitle {
+  font-size: 1.5em;
+  width: 100%;
+  text-align: center;
+}
+.Highscores__statisticsSubTitle {
+  font-size: 0.5em;
+  width: 100%;
+  text-align: center;
+}
+.Highscores__searchContainer {
+  padding: 0.5em 0.5em 0.5em 0.5em;
+  width: 100%;
+  margin: 1em 0 1em 0;
+  border: 2px solid whitesmoke;
+}
+.Highscores__highscoresSearch {
+  width: 55%;
+}
+.highscoresSearch input {
+  width: 100%;
+  padding: 1em 0 1em 1em;
+  border: 2px solid #272727;
+}
+.Highscores__highscoreButtons {
+  width: 41%;
+  float: right;
+}
+.Highscores__highscoreButtons button {
+  width: 48%;
+  border: 2px solid #272727;
+  padding: 1em 0 1em 0;
+  margin: 0;
+  margin: 0 0.25em 0 0;
+}
+.Highscores_highscoreButtons:last-child {
+  color: var(--color-whiteSmoke);
+  background-color: var(--color-grey);
+}
+.Highscores__alternateSearches {
+  padding: 0.5em 0.5em 0.5em 0.5em;
+  border: 2px solid var(--color-whiteSmoke);
+  width: 100%;
+}
+.Highscores__alternateSearches div {
+  width: 32%;
+  margin: 0.5em 0.25em 0.5em 0.25em;
+}
+.Highscores__alternateSearches button {
+  width: 100%;
+  background-color: var(--color-grey);
+  color: var(--color-whiteSmoke);
+}
+.Highscores__groupButtons {
+  width: 48% !important;
+}
+.Highscores__groupButtons button {
+  width: 100% !important;
+}
+</style>

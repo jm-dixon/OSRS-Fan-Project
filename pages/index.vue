@@ -1,5 +1,5 @@
 <template>
-  <div class="indexPage">
+  <div class="Index__page">
     <index-slideshow />
 
     <div class="Index__fullWidth flex jc-c ac-c">
@@ -61,7 +61,12 @@ export default {
 }
 </script>
 
-<style>
+<style type="text/css">
+.Index__page {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
 .Index__fullWidth {
   width: 100%;
   background-color: var(--color-whiteSmoke);
