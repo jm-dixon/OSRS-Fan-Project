@@ -3,10 +3,10 @@
         <nuxt-link class="headerNav" to='/'>
           Home
         </nuxt-link>
-        <nuxt-link class="headerNav" to='/highscores'>
+        <nuxt-link class="headerNav" to='#'>
           Highscores
         </nuxt-link>
-        <nuxt-link class="headerNav" to='/bestiary'>
+        <nuxt-link class="headerNav" to='#'>
           Bestiary
         </nuxt-link>
     </div>
