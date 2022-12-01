@@ -1,43 +1,42 @@
 <template>
-  <div class="anchorBlock">
-    <div class="indexContainer">
-      <p class="statisticsTitle">
+  <div class="StatisticsBlock">
+      <h1>
         <b>
-          {{ blockTitle }}</b>
-      </p>
-      <div class="statisticsContainer">
-        <div class="statisticsBlock">
-          <p class="statisticsTitle">
+          {{ blockTitle }}
+        </b>
+      </h1>
+      <div class="StatisticsBlock__container flex jc-c">
+        <div class="StatisticsBlock__block">
+          <h3>
             <b>
               {{ playerCountTitle }}
             </b>
-          </p>
-          <p class="statisticsData">
+          </h3>
+          <p>
             <b>
               {{ playerCount }}
             </b>
           </p>
-          <p class="statisticsSubTitle">
+          <h6>
             {{ playerSub }}
-          </p>
+          </h6>
         </div>
-        <div class="statisticsBlock">
-          <p class="statisticsTitle">
+        <div class="StatisticsBlock__block">
+          <h3>
             <b>
               {{ totalAccountsTitle }}
             </b>
-          </p>
-          <p class="statisticsData">
+          </h3>
+          <p>
             <b>
               {{ totalAccounts }}
             </b>
           </p>
-          <p class="statisticsSubTitle">
+          <h6>
             {{ totalSub }}
-          </p>
+          </h6>
         </div>
       </div>
-    </div>
   </div>
 </template>
 
@@ -92,3 +91,32 @@ export default {
   }
 }
 </script>
+
+<style type="text/css">
+.StatisticsBlock h1 {
+  font-family: 'Kanit', sans-serif;
+  color: var(--color-grey);
+  text-align: center;
+}
+.StatisticsBlock__block {
+  border: 2px solid var(--color-grey);
+  padding: var(--padding-md);
+  margin: 0.5em 0.2em 0.5em 0.2em;
+}
+.StatisticsBlock__block h3 {
+  font-family: 'Kanit', sans-serif;
+  color: var(--color-grey);
+  text-align: center;
+}
+.StatisticsBlock__block p {
+  font-size: 2em;
+  text-align: center;
+  margin: 0;
+}
+.StatisticsBlock__block h6 {
+  font-size: 0.5em;
+  width: 100%;
+  text-align: center;
+  color: var(--color-lightGrey);
+}
+</style>

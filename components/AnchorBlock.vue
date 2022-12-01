@@ -1,26 +1,24 @@
 <template>
-  <div class="anchorBlock">
-    <div class="indexContainer">
-      <p class="anchorTitle">
+  <div class="AnchorBlock">
+      <h1>
         <b>
           {{ blockTitle }}
         </b>
-      </p>
-      <p class="anchorData">
+      </h1>
+      <p>
         {{ blockData }}
       </p>
       <button type="button">
         {{ blockButtonLabel }}
       </button>
       <!-- ADD CONTRIBUTE SECTION WHERE USERS CAN UPLOAD OBJECT FILES FROM RUNELITE -->
-      <button class="conditionalButton" type="button" v-if="this.blockTitle == 'Old School Runescape Bestiary'">
+      <button class="AnchorBlock__conditional" type="button" v-if="this.blockTitle == 'Old School Runescape Bestiary'">
         Contribute
       </button>
       <!-- ADD CONTRIBUTE SECTION WHERE USERS CAN SUBMIT THEIR INTEREST TO BE A CONTRIBUTOR -->
-      <button class="conditionalButton" type="button" v-if="this.blockTitle == 'Project Information'">
+      <button class="AnchorBlock__conditional" type="button" v-if="this.blockTitle == 'Project Information'">
         Contribute
       </button>
-    </div>
   </div>
 </template>
 
@@ -34,3 +32,21 @@ export default {
   }
 }
 </script>
+
+<style type="text/css">
+.AnchorBlock h1 {
+  font-family: 'Kanit', sans-serif;
+  font-weight: 100;
+  color: #272727;
+}
+.AnchorBlock p {
+  font-size: 1.5em;
+}
+.AnchorBlock button {
+  margin-right: 0.8em;
+}
+.AnchorBlock__conditional {
+  background-color: var(--color-grey);
+  color: var(--color-whiteSmoke);
+}
+</style>
