@@ -1,59 +1,60 @@
 <template>
-  <div class="Highscores__page flex">
-    <div class="Highscores__pageContainer">
-      <p class="Highscores__subPageTitle">
+  <div class="Highscores flex jc-c ac-c ff-c-w">
+      <h1>
         <b>
           {{ pageHeader }}
         </b>
-      </p>
-      <p class="Highscores__statisticsSubTitle">
+      </h1>
+      <h6>
         {{ dataSource }}
-      </p>
-      <div class="Highscores__searchContainer flex">
-        <div class="Highscores__highscoresSearch flex">
-          <input class="flex" id="playerInput" :placeholder="this.searchPlaceholder" />
+      </h6>
+      <div class="Highscores__playerSearch flex jc-c ac-c">
+        <div class="Highscores__searchField flex">
+          <input class="Highscores__inputPlayer flex" id="playerInput" :placeholder="this.searchPlaceholder" />
         </div>
-        <div class="Highscores__highscoreButtons">
-          <button class="flex" type="button" @click="this.getPlayerData">
+        <div class="Highscores__searchButtons flex">
+          <button class="Highscores__buttonSearch flex" type="button" @click="this.getPlayerData">
             Search
           </button>
-          <button class="flex" type="button" @click="this.clearSearch">
+          <button class="Highscores__buttonClear flex" type="button" @click="this.clearSearch">
             Clear
           </button>
         </div>
       </div>
-      <div class="Highscores__alternateSearches flex">
-        <div class="flex">
-          <button class="flex" type="button" @click="updateSearchParameters">Ironmen</button>
+      <div class="Highscores__accountTypes flex jc-c ac-c ff-r-w">
+        <div>
+          <button type="button" @click="updateSearchParameters">Ironmen</button>
         </div>
-        <div class="flex">
-          <button class="flex" type="button" @click="updateSearchParameters">Hardcore Ironmen</button>
+        <div>
+          <button type="button" @click="updateSearchParameters">Hardcore Ironmen</button>
         </div>
-        <div class="flex">
-          <button class="flex" type="button" @click="updateSearchParameters">Ultimate Ironmen</button>
+        <div>
+          <button type="button" @click="updateSearchParameters">Ultimate Ironmen</button>
         </div>
-        <div class="Highscores__groupButtons">
-          <button class="groupButton" type="button" @click="updateSearchParameters">Group Ironmen</button>
-        </div>
-        <div class="Highscores__groupButtons hardcoreGroup">
-          <button class="hardcoreButton" type="button" @click="updateSearchParameters">Hardcore Group Ironmen</button>
-        </div>
+      </div>
 
-        <div class="groupSizeButtons" v-if="accountType == '_ironman/group-ironman' || this.accountType == '_hardcore_ironman/group-ironman'">
-          <div>
-            <div class="teamSizeContainers">
-              <button>2s</button>
-            </div>
-            <div class="teamSizeContainers">
-              <button>3s</button>
-            </div>
-            <div class="teamSizeContainers">
-              <button>4s</button>
-            </div>
-            <div class="teamSizeContainers">
-              <button>5s</button>
-            </div>
-          </div>
+      <div class="Highscores__groupAccounts flex jc-c ac-c ff-r-w"@>
+        <div>
+          <button type="button" @click="updateSearchParameters">Group Ironmen</button>
+        </div>
+        <div>
+          <button type="button" @click="updateSearchParameters">Hardcore Group Ironmen</button>
+        </div>
+      </div>
+        
+      <div class="Highscores__groupSizes flex jc-c ac-c ff-r-nw" 
+        v-if="accountType == '_ironman/group-ironman' || this.accountType == '_hardcore_ironman/group-ironman'">
+        <div>
+          <button type="button" @click="updateGroupSizes">2s</button>
+        </div>
+        <div>
+          <button type="button" @click="updateGroupSizes">3s</button>
+        </div>
+        <div>
+          <button type="button" @click="updateGroupSizes">4s</button>
+        </div>
+        <div>
+          <button type="button" @click="updateGroupSizes">5s</button>
         </div>
       </div>
 
@@ -76,12 +77,11 @@
 
       -->
 
-      <div v-else class="defaultResult">
+      <div v-else class="Highscores__default flex jc-c ac-c">
         <p>
           <b>Overall Highscores</b> | Top 50 Players
         </p>
       </div>
-    </div>
   </div>
 </template>
 
@@ -98,7 +98,7 @@ export default {
       return {
         pageHeader: 'Highscores & Leaderboards',
         dataSource: '* data pulled using the OSRS API *',
-        searchPlaceholder: 'Search Mains...',
+        searchPlaceholder: 'Search Mains',
         playerToSearch: null,
         accountType: null
       }
@@ -111,7 +111,7 @@ export default {
     clearSearch() {
       document.getElementById("playerInput").value = '';
       this.playerToSearch = null;
-      this.searchPlaceholder = 'Search Main Accounts...';
+      this.searchPlaceholder = 'Search Mains';
       this.accountType = null;
     },
     updateSearchParameters(event) {
@@ -135,20 +135,87 @@ export default {
         this.searchPlaceholder = 'Search Group Ironmen...';
         this.accountType = '_ironman/group-ironman';
       }
+    },
+    updateGroupSizes(event) {
+      let groupSize;
+      const currentURL = this.accountType;
+      if (event) {
+        groupSize = event.target.innerHTML;
+        groupSize = groupSize.slice(0, -1);
+      }
+
+      const groupIronURLs = '/?groupSize=' + groupSize
+      const url = this.accountType + groupIronURLs
+      this.accountType = url
+
+      console.log(this.accountType);
+
     }
   },
 }
 </script>
 
 <style type="text/css">
-.Highscores__page {
+.Highscores {
   width: 100%;
   background-color: var(--color-whiteSmoke);
 }
-.Highscores__pageContainer {
-  width: 45%;
-  margin: 0 auto;
+.Highscores h1 {
+  font-family: 'Kanit', sans-serif;
+  color: var(--color-grey);
+  text-align: center;
 }
+.Highscores h6 {
+  font-family: 'Kanit', sans-serif;
+  font-weight: 200;
+  color: var(--color-lightGrey);
+  text-align: center;
+  margin-top: 0;
+}
+.Highscores__searchField {
+    margin-right: var(--margin-md);
+}
+.Highscores__inputPlayer {
+  padding: var(--padding-sm);
+  font-size: 1em;
+  font-family: 'Kanit', sans-serif;
+  font-weight: 200;
+  min-width: 250px;
+}
+.Highscores__inputPlayer::placeholder {
+  color: var(--color-grey);
+}
+.Highscores__buttonSearch {
+  margin-right: var(--margin-md);
+}
+.Highscores__accountTypes {
+  padding-top: var(--padding-md);
+}
+.Highscores__groupAccounts div {
+  margin: var(--margin-sm);
+}
+.Highscores__groupAccounts button {
+  background-color: var(--color-grey);
+  color: var(--color-whiteSmoke);
+}
+.Highscores__accountTypes div {
+  margin: var(--margin-sm);
+}
+.Highscores__accountTypes button {
+  background-color: var(--color-grey);
+  color: var(--color-whiteSmoke);
+}
+.Highscores__groupSizes div {
+  margin: var(--margin-sm);
+}
+.Highscores__groupSizes button:focus {
+  background-color: var(--color-grey);
+  color: var(--color-whiteSmoke);
+}
+.Highscores__default {
+
+}
+
 .Highscores__subPageTitle {
   font-size: 1.5em;
   width: 100%;
@@ -163,7 +230,7 @@ export default {
   padding: 0.5em 0.5em 0.5em 0.5em;
   width: 100%;
   margin: 1em 0 1em 0;
-  border: 2px solid whitesmoke;
+  border: 2px solid var(--color-whiteSmoke);
 }
 .Highscores__highscoresSearch {
   width: 55%;
@@ -171,7 +238,7 @@ export default {
 .highscoresSearch input {
   width: 100%;
   padding: 1em 0 1em 1em;
-  border: 2px solid #272727;
+  border: 2px solid var(--color-grey);
 }
 .Highscores__highscoreButtons {
   width: 41%;
