@@ -42,17 +42,7 @@ button {
   padding: 1em;
   text-align: center;
 }
-.subPageTitle {
-  font-size: 1.5em;
-  width: 100%;
-  text-align: center;
-}
 /* index.vue */
-.indexPage {
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-}
 .indexContent {
   width: 40%;
   display: flex;
@@ -72,72 +62,15 @@ button {
   justify-content: center;
 }
 /* highscores.vue */
-.highscoresPage {
-  display: flex;
-  width: 100%;
-  background-color: whitesmoke;
-}
-.searchContainer {
-  padding: 0.5em 0.5em 0.5em 0.5em;
-  width: 100%;
-  display: flex;
-  margin: 1em 0 1em 0;
-  border: 2px solid whitesmoke;
-}
-.highscoresSearch {
-  width: 55%;
-  display: flex;
-}
-.highscoresSearch input {
-  width: 100%;
-  display: flex;
-  padding: 1em 0 1em 1em;
-  border: 2px solid #272727;
-}
-.highscoreButtons {
-  width: 41%;
-  float: right;
-}
-.highscoreButtons button {
-  width: 48%;
-  border: 2px solid #272727;
-  padding: 1em 0 1em 0;
-  margin: 0;
-  display: flex;
-  margin: 0 0.25em 0 0;
-}
 .defaultResult {
   width: 100%;
   display: flex;
   text-align: center;
   padding: 0.2em 0.2em 0.2em 0.2em;
 }
-.alternateSearches {
-  padding: 0.5em 0.5em 0.5em 0.5em;
-  border: 2px solid whitesmoke;
-  display: flex;
-  width: 100%;
-}
-.alternateSearches div {
-  width: 32%;
-  display: flex;
-  margin: 0.5em 0.25em 0.5em 0.25em;
-}
-.alternateSearches button {
-  width: 100%;
-  display: flex;
-  background-color: #272727;
-  color: whitesmoke;
-}
-.groupButtons {
-  width: 48% !important;
-}
 .hardcoreGroup {
   margin: 0.5em 0.25em 0.5em 0.25em !important;
   float: right !important;
-}
-.groupButtons button {
-  width: 100% !important;
 }
 .hardcoreButton {
   float: right !important;
