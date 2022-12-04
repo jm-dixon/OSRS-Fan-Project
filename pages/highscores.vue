@@ -33,7 +33,7 @@
         </div>
       </div>
 
-      <div class="Highscores__groupAccounts flex jc-c ac-c ff-r-w"@>
+      <div class="Highscores__groupAccounts flex jc-c ac-c ff-r-w">
         <div>
           <button type="button" @click="updateSearchParameters">Group Ironmen</button>
         </div>
@@ -149,7 +149,6 @@ export default {
       this.accountType = url
 
       console.log(this.accountType);
-
     }
   },
 }
@@ -212,11 +211,8 @@ export default {
   background-color: var(--color-grey);
   color: var(--color-whiteSmoke);
 }
-.Highscores__default {
 
-}
-
-.Highscores__subPageTitle {
+/* .Highscores__subPageTitle {
   font-size: 1.5em;
   width: 100%;
   text-align: center;
@@ -274,5 +270,5 @@ export default {
 }
 .Highscores__groupButtons button {
   width: 100% !important;
-}
+} */
 </style>
