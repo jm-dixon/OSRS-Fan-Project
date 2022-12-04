@@ -1,12 +1,12 @@
 <template>
-    <div class="headerNavbar">
-        <nuxt-link class="headerNav" to='/'>
+    <div class="Header">
+        <nuxt-link to='/'>
           Home
         </nuxt-link>
-        <nuxt-link class="headerNav" to='/highscores'>
+        <nuxt-link to='#'>
           Highscores
         </nuxt-link>
-        <nuxt-link class="headerNav" to='/bestiary'>
+        <nuxt-link to='#'>
           Bestiary
         </nuxt-link>
     </div>
@@ -17,3 +17,20 @@ export default {
     name: 'AppHeader'
 }
 </script>
+
+<style>
+.Header {
+  text-align: right;
+  display: flex;
+  width:100%;
+  justify-content: flex-end;
+  position: absolute;
+}
+.Header a {
+  text-decoration: none;
+  font-size: 1em;
+  color: whitesmoke;
+  padding: 1.5em 1.5em 1.5em 1.5em;
+  float: right;
+}
+</style>

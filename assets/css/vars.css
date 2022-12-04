@@ -48,4 +48,8 @@ does not include colours, colour vars are located in colours.css
     --dashed-md: 2px dashed;
     --dashed-lg: 3px dashed;
     --dashed-xl: 5px dashed;
+  
+    /* 
+    text vars 
+    */
 }

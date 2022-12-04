@@ -214,7 +214,6 @@ button {
 .slideshow {
   display: flex;
   width: 100%;
-  /* NOT NEEDED AFTER IMAGE CORRECTION */
   max-height: 850px;
   overflow: hidden;
 }

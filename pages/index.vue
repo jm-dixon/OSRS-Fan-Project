@@ -1,6 +1,8 @@
 <template>
-  <div class="Index__page">
-    <index-slideshow />
+  <div class="Index">
+    <div class="Index__imageHeader">
+      <img :src="this.headerImage" />
+    </div>
 
     <div class="Index__fullWidth flex jc-c ac-c">
       <div class="Index__playerCountContainer">
@@ -17,13 +19,13 @@
       </div>
     </div>
 
-    <index-anchor anchorPurpose="highscores" />
+    <div class="Index__anchors flex ff-c-w jc-c ai-c">
+      <index-anchor anchorPurpose="highscores" />
+      <index-anchor anchorPurpose="bestiary" />
+      <index-anchor anchorPurpose="project" />
+      <index-anchor anchorPurpose="statistics" />
+    </div>
 
-    <index-anchor anchorPurpose="bestiary" />
-
-    <index-anchor anchorPurpose="project" />
-
-    <index-anchor anchorPurpose="statistics" />
   </div>
 </template>
 
@@ -31,15 +33,16 @@
 // imports
 import axios from 'axios'
 
-import IndexSlideshow from '../components/IndexSlideshow.vue'
+import headerImage from '../assets/wallpapers/osrs-map-large.jpg'
 import IndexAnchor from '../components/IndexAnchor.vue'
 
 export default {
-  components: { IndexSlideshow, IndexAnchor },
+  components: { IndexAnchor },
   name: 'IndexPage',
   data() {
     return {
       playerCount: null,
+      headerImage
     }
   },
   methods: {
@@ -62,10 +65,10 @@ export default {
 </script>
 
 <style type="text/css">
-.Index__page {
+.Index__imageHeader {
+  display: flex;
   width: 100%;
-  height: 100%;
-  background-size: cover;
+  overflow: hidden;
 }
 .Index__fullWidth {
   width: 100%;
@@ -98,5 +101,8 @@ export default {
   margin-top: var(--margin-sm);
   margin-bottom: var(--margin-sm);
   color: var(--color-grey);
+}
+.Index__anchors {
+  background-color: var(--color-whiteSmoke);
 }
 </style>
