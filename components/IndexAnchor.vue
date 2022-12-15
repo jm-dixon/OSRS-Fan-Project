@@ -8,6 +8,7 @@
         compare your own account against your
         friends
         "
+        buttonLink="/highscores"
         blockButtonLabel="Vist Page"
       />
     <!-- ADD ANCHOR LINKS TO THESE BLOCKS -->
@@ -17,6 +18,7 @@
           An open source project to build a
           complete Old School Runescape Bestiary
         "
+        buttonLink="/bestiary"
         blockButtonLabel="Visit Page"
       />
     <!-- ADD ANCHOR LINKS TO THESE BLOCKS -->
@@ -27,6 +29,7 @@
         Contribute to the project or view its source
         code and future development plans
         "
+        buttonLink="https://github.com/jm-dixon/OSRS-Fan-Project"
         blockButtonLabel="Github Repository"
       />
       <statistics-block v-else-if="this.anchorPurpose = 'statistics'"

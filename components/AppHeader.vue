@@ -29,8 +29,15 @@ export default {
 .Header a {
   text-decoration: none;
   font-size: 1em;
-  color: whitesmoke;
+  color: var(--color-whiteSmoke);
   padding: 1.5em 1.5em 1.5em 1.5em;
   float: right;
+}
+.Header a:hover {
+  color: var(--color-neruoscriptBlue);
+  transition: 0.8s ease;
+}
+.Header a:not(:hover) {
+  transition: 0.5s ease;
 }
 </style>

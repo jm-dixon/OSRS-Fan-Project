@@ -103,4 +103,11 @@ export default {
   padding: 0.2em 0.2em 0.2em 0.2em;
   list-style: none;
 }
+.footerNavbar li:hover {
+  transition: 0.8s ease;
+  color: var(--color-neruoscriptBlue);
+}
+.footerNavbar li:not(:hover) {
+  transition: 0.5s ease;
+}
 </style>
