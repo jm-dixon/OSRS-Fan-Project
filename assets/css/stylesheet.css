@@ -132,27 +132,7 @@ button {
 
 }
 /* AppFooter.vue */
-.footerNavbar {
-  text-align: left;
-  background-color: #272727;
-  width: 100%;
-  display: flex;
-}
-.footerCopyright {
-  color: whitesmoke;
-  padding: 1em;
-  display: flex;
-}
-.footerLinks {
-  padding: 0.5em 0.5em 0.5em 0.5em;
-  display: flex;
-}
-.footerLinks li {
-  color: whitesmoke;
-  text-decoration: none;
-  padding: 0.2em 0.2em 0.2em 0.2em;
-  list-style: none;
-}
+
 /* AppHeader.vue */
 .headerNavbar {
   text-align: right;
