@@ -21,23 +21,23 @@
           </button>
         </div>
       </div>
-      <div class="Highscores__accountTypes flex jc-c ac-c ff-r-w">
-        <div>
+      <div class="Highscores__accountTypes flex jc-se ac-c ff-r-w">
+        <div class="flex jc-fs">
           <button type="button" @click="updateSearchParameters">Ironmen</button>
         </div>
-        <div>
+        <div class="flex jc-c">
           <button type="button" @click="updateSearchParameters">Hardcore Ironmen</button>
         </div>
-        <div>
+        <div class="flex jc-fe">
           <button type="button" @click="updateSearchParameters">Ultimate Ironmen</button>
         </div>
       </div>
 
-      <div class="Highscores__groupAccounts flex jc-c ac-c ff-r-w">
-        <div>
+      <div class="Highscores__groupAccounts flex jc-se ac-c ff-r-w">
+        <div class="flex jc-fs">
           <button type="button" @click="updateSearchParameters">Group Ironmen</button>
         </div>
-        <div>
+        <div class="flex jc-fe">
           <button type="button" @click="updateSearchParameters">Hardcore Group Ironmen</button>
         </div>
       </div>
@@ -190,19 +190,25 @@ export default {
 .Highscores__accountTypes {
   padding-top: var(--padding-md);
 }
-.Highscores__groupAccounts div {
-  margin: var(--margin-sm);
+.Highscores__accountTypes > div {
+  width: 33% !important;
 }
-.Highscores__groupAccounts button {
+.Highscores__accountTypes > div > button {
   background-color: var(--color-grey);
   color: var(--color-whiteSmoke);
+  margin: var(--margin-sm) 0 var(--margin-sm) 0;
+  width: 98%;
+  font-size: 0.8em;
 }
-.Highscores__accountTypes div {
-  margin: var(--margin-sm);
+.Highscores__groupAccounts > div {
+  width: 50% !important;
 }
-.Highscores__accountTypes button {
+.Highscores__groupAccounts > div > button {
   background-color: var(--color-grey);
   color: var(--color-whiteSmoke);
+  margin: var(--margin-sm) 0 var(--margin-sm) 0;
+  width: 99%;
+  font-size: 0.8em;
 }
 .Highscores__groupSizes div {
   margin: var(--margin-sm);
@@ -211,64 +217,10 @@ export default {
   background-color: var(--color-grey);
   color: var(--color-whiteSmoke);
 }
-
-/* .Highscores__subPageTitle {
-  font-size: 1.5em;
-  width: 100%;
-  text-align: center;
+.Highscores__default {
+  margin-top: var(--margin-md);
 }
-.Highscores__statisticsSubTitle {
-  font-size: 0.5em;
-  width: 100%;
-  text-align: center;
+.Highscores__default > p {
+  margin-bottom: var(--margin-md);
 }
-.Highscores__searchContainer {
-  padding: 0.5em 0.5em 0.5em 0.5em;
-  width: 100%;
-  margin: 1em 0 1em 0;
-  border: 2px solid var(--color-whiteSmoke);
-}
-.Highscores__highscoresSearch {
-  width: 55%;
-}
-.highscoresSearch input {
-  width: 100%;
-  padding: 1em 0 1em 1em;
-  border: 2px solid var(--color-grey);
-}
-.Highscores__highscoreButtons {
-  width: 41%;
-  float: right;
-}
-.Highscores__highscoreButtons button {
-  width: 48%;
-  border: 2px solid #272727;
-  padding: 1em 0 1em 0;
-  margin: 0;
-  margin: 0 0.25em 0 0;
-}
-.Highscores_highscoreButtons:last-child {
-  color: var(--color-whiteSmoke);
-  background-color: var(--color-grey);
-}
-.Highscores__alternateSearches {
-  padding: 0.5em 0.5em 0.5em 0.5em;
-  border: 2px solid var(--color-whiteSmoke);
-  width: 100%;
-}
-.Highscores__alternateSearches div {
-  width: 32%;
-  margin: 0.5em 0.25em 0.5em 0.25em;
-}
-.Highscores__alternateSearches button {
-  width: 100%;
-  background-color: var(--color-grey);
-  color: var(--color-whiteSmoke);
-}
-.Highscores__groupButtons {
-  width: 48% !important;
-}
-.Highscores__groupButtons button {
-  width: 100% !important;
-} */
 </style>
