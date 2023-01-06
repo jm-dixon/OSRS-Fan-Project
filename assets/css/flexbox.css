@@ -53,6 +53,9 @@ styles for flex containers
 .jc-sb {
     justify-content: space-between;
 }
+.jc-se {
+    justify-content: space-evenly;
+}
 .jc-b {
     justify-content: baseline;
 }

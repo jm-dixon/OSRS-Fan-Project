@@ -22,6 +22,7 @@ export default {
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     '@/assets/css/stylesheet.css',
+    '@/assets/css/global.css',
     '@/assets/css/flexbox.css',
     '@/assets/css/vars.css',
     '@/assets/css/colours.css'

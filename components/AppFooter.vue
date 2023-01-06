@@ -74,7 +74,7 @@ export default {
 <style type="text/css">
 .footerNavbar {
   text-align: left;
-  background-color: #272727;
+  background-color: var(--color-grey);
   width: 100%;
   display: flex;
 }
