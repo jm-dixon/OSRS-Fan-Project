@@ -3,10 +3,10 @@
         <nuxt-link to='/'>
           Home
         </nuxt-link>
-        <nuxt-link to='#'>
+        <nuxt-link to='/highscores'>
           Highscores
         </nuxt-link>
-        <nuxt-link to='#'>
+        <nuxt-link to='/bestiary'>
           Bestiary
         </nuxt-link>
     </div>
