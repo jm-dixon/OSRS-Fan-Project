@@ -1,29 +1,49 @@
 <template>
-  <div class="searchResult">
-    <p class="highscoresTitle">
+  <div class="SearchResult flex jc=c ac-c ff-c-nw">
+    <p class="SearchResult__heading">
       <b>{{ playerToSearch }}</b> | Highscores
     </p>
 
-    <div class="highscoreTitles">
-      <b>
-        <h4>Total XP</h4><h4>Level</h4><h4>Rank</h4>
-      </b>
+    <div class="SearchResult__metrics flex jc-fe ff-r-nw">
+        <div>
+          <b>
+            <h4>Total XP</h4>
+          </b>
+        </div>
+        <div>
+          <b>
+            <h4>Level</h4>
+          </b>
+        </div>
+        <div>
+          <b>
+            <h4>Rank</h4>
+          </b>
+        </div>
     </div>
 
-    <div class="highscoreTitles"
+    <div class="SearchResult__results flex jc-fe ff-r-nw"
     v-for="skill in skillsArray" :key="skill.skillName">
-      <p>
-        {{ parseInt(skill.skillMetrics[2]).toLocaleString() }}
-      </p>
-      <p>
-        {{ skill.skillMetrics[1] }}
-      </p>
-      <p>
-        {{ parseInt(skill.skillMetrics[0]).toLocaleString() }}
-      </p>
-      <p>
-        <b>{{ skill.skillName }}: </b>
-      </p>
+      <div>
+        <p>
+          <b>{{ skill.skillName }}: </b>
+        </p>
+      </div>
+      <div>
+        <p>
+          {{ parseInt(skill.skillMetrics[0]).toLocaleString() }}
+        </p>
+      </div>
+      <div>
+        <p>
+          {{ skill.skillMetrics[1] }}
+        </p>
+      </div>
+      <div>
+        <p>
+          {{ parseInt(skill.skillMetrics[2]).toLocaleString() }}
+        </p>
+      </div>
     </div>
 
     <br />
@@ -185,3 +205,23 @@ export default {
   }
 }
 </script>
+
+<style>
+.SearchResult__heading {
+  text-align: center;
+  font-size: 1.5em;
+}
+.SearchResult__metrics {
+  font-size: 1.2em;
+  text-align: right;
+}
+.SearchResult__metrics > div {
+  width: 25%;
+}
+.SearchResult__results > div {
+  width: 25%;
+}
+.SearchResult__results > div > p {
+  text-align: right;
+}
+</style>
