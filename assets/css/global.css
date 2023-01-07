@@ -1,0 +1,24 @@
+/* 
+handles global css styles 
+*/
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;400;700&display=swap');
+
+body {
+    margin: 0;
+}
+p, pre {
+    font-family: "Kanit", sans-serif;
+    margin: 0;
+    color: var(--color-grey);
+}
+a, li {
+    font-family: "Kanit", sans-serif;
+}
+h1, h2, h3, h4 {
+    font-family: "Kanit", sans-serif;
+}
+button, input, textarea {
+    font-family: "Kanit", sans-serif;
+}

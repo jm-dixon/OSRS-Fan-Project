@@ -100,7 +100,7 @@ export default {
 }
 .StatisticsBlock__block {
   border: 2px solid var(--color-grey);
-  padding: var(--padding-md);
+  padding: var(--padding-md) var(--padding-xl);
   margin: 0.5em 0.2em 0.5em 0.2em;
 }
 .StatisticsBlock__block h3 {

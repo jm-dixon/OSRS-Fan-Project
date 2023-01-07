@@ -10,19 +10,7 @@ hgroup {
   font-weight: 200;
   color: #272727;
 }
-a {
-  font-family: 'Kanit', sans-serif;
-  font-weight: 400;
-  text-decoration: none;
-}
-li {
-  font-family: 'Kanit', sans-serif;
-  font-weight: 200;
-}
 /* multiple page styles */
-body {
-  margin: 0 !important;
-}
 button {
   padding: 1em 1.5em 1em 1.5em;
   background-color: whitesmoke;
@@ -128,31 +116,9 @@ button {
   display: flex;
 }
 /* default.vue */
-.defaultContent {
 
-}
 /* AppFooter.vue */
-.footerNavbar {
-  text-align: left;
-  background-color: #272727;
-  width: 100%;
-  display: flex;
-}
-.footerCopyright {
-  color: whitesmoke;
-  padding: 1em;
-  display: flex;
-}
-.footerLinks {
-  padding: 0.5em 0.5em 0.5em 0.5em;
-  display: flex;
-}
-.footerLinks li {
-  color: whitesmoke;
-  text-decoration: none;
-  padding: 0.2em 0.2em 0.2em 0.2em;
-  list-style: none;
-}
+
 /* AppHeader.vue */
 .headerNavbar {
   text-align: right;
