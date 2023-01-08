@@ -1,5 +1,10 @@
 <template>
-  <div class="bestiaryPage">
+  <div class="Bestiary flex jc-c ac-c ff-c-w">
+    <h1>
+      <b>
+        {{  pageHeader }}
+      </b>
+    </h1>
     <div class="pageContainer">
       <p class="bestiaryCounters">
         Number of Bestiary
@@ -26,20 +31,14 @@
 import axios from 'axios'
 
 export default {
-    components: {  },
     name: 'RunescapeBeastiary',
-    props: {
-        /* No Props */
-    },
     data() {
         return {
+          pageHeader: 'OSRS Bestiary',
           entriesFound: null,
           missingEntries: null,
           entriesList: []
         }
-    },
-    computed: {
-        /* No Computed */
     },
     methods: {
       async loopThroughBeastiary() {
@@ -69,3 +68,13 @@ export default {
     },
 }
 </script>
+
+<style>
+.Bestiary {
+  background-color: var(--color-whiteSmoke);
+}
+.Bestiary > h1 {
+  text-align: center;
+  color: var(--color-grey);
+}
+</style>
