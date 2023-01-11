@@ -4,6 +4,30 @@
       <b>{{ playerToSearch }}</b> | Highscores
     </p>
 
+    <!--
+    Code for table search result
+
+    <table>
+      <tr></tr> (Skill Name)
+      <tr>Total XP</tr>
+      <tr>Level</tr>
+      <tr>Rank</tr>
+    </table>
+
+    <table>
+      <tr></tr> (Activity Name)
+      <tr>Rank</tr>
+      <tr>Score</tr>
+    </table>
+
+    <table>
+      <tr></tr> (Boss Name)
+      <tr>Rank</tr>
+      <tr>Killcount</tr>
+    </table>
+
+    -->
+
     <div class="SearchResult__metrics flex jc-fe ff-r-nw">
         <div>
           <b>
