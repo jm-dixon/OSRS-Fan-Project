@@ -15,9 +15,6 @@
 
 <script>
 // imports
-import sliderOne from '../assets/wallpapers/osrs_wallpaper_one.png'
-import sliderTwo from '../assets/wallpapers/osrs_wallpaper_two.png'
-import sliderThree from '../assets/wallpapers/osrs_wallpaper_three.webp'
 
 export default {
   name: 'IndexSlideshow',
