@@ -115,7 +115,12 @@
 </template>
 
 <script>
+// imports
 import axios from 'axios'
+
+import skills from '../assets/json/skills.json'
+import activities from '../assets/json/activities.json'
+import bosses from '../assets/json/bosses.json'
 
 export default {
   name: 'SearchResult',
@@ -125,6 +130,10 @@ export default {
   },
   data() {
     return {
+      skills: skills,
+      activities: activities,
+      bosses: bosses,
+
       highscoreData: null,
       skillsArray: [],
       activitiesArray: [],
