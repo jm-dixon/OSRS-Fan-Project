@@ -1,3 +1,16 @@
+# Old School Runescape Fan Project
+
+This is a fan project website for the MMORPG Old School Runescape developed by Jagex. 
+
+## Website has the following functionality:
+
+- Highscores lookup. - can lookup any player with any account type. Will work the same way as the highscores on the official website, you must log out before the highscores will update themselves.
+- Current player counts and counter for total accounts made. - Two counters, one which tracks the number of players currently online in both Old School Runescape and Runescape 3, the other which tracks the total number of accounts made that can access either or both versions of the game.
+
+## Plans for future functionality:
+
+- Old School Runescape Bestiary. - Will be creating a Bestiary for the game with the help of a Runelite plugin which exports 3d characters models. Old School Runesacpe has no Bestiary currently, so this is going to be a long running personal project to create one.
+
 # nuxt-project
 
 ## Build Setup
