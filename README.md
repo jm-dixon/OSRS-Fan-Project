@@ -11,8 +11,6 @@ This is a fan project website for the MMORPG Old School Runescape developed by J
 
 - Old School Runescape Bestiary. - Will be creating a Bestiary for the game with the help of a Runelite plugin which exports 3d characters models. Old School Runesacpe has no Bestiary currently, so this is going to be a long running personal project to create one.
 
-# nuxt-project
-
 ## Build Setup
 
 ```bash
